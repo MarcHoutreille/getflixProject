@@ -27,7 +27,7 @@ HTML5 / CSS3 / BOOSTRAP / JAVASCRIPT / PHP
 Ce site de streaming a été réalisé grâce à HTML/CSS3/BOOSTRAP/JAVASCRIPT/PHP et construit dans Visual Studio Code.
 
 ## Les Étapes
-1. Etude du projet et création du "Jomboard"
+1. Etude du projet et création du Jamboard
 2. Discussion sur le travail à réaliser
 3. Répartition des tâches Front / Back
 4. Création du repo
@@ -50,11 +50,19 @@ Ce site de streaming a été réalisé grâce à HTML/CSS3/BOOSTRAP/JAVASCRIPT/P
     - Démarrage du codage en Javascript et PHP<br>
     - Structurer le Javascript en correspondance des balises HTML.<br>
 
-## Layout / Jomboard
+## Layout / Jamboard
 ![Wireframe 1](images/xxx.jpg)
 ![Wireframe 2](images/xxx.jpg)
 ![Wireframe 3](images/xxx.jpg)
 ![Wireframe 4](images/xxx.jpg)
+
+## Color Palette
+
+#000000 - black text
+#3D2645
+#832161
+#DA4167
+#F0EEFF4 - white bg
 
 ## Licences
 ### Images
