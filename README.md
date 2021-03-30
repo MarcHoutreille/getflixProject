@@ -59,9 +59,13 @@ Ce site de streaming a été réalisé grâce à HTML/CSS3/BOOSTRAP/JAVASCRIPT/P
 ## Color Palette
 
 #000000 - black text
+
 #3D2645
+
 #832161
+
 #DA4167
+
 #F0EEFF4 - white bg
 
 ## Licences
