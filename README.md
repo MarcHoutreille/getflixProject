@@ -1,3 +1,4 @@
+
 # Projet PHP : "GetFlix"
 
 Retrouvez ici toutes les informations concernant le site de streaming et les techniques utilisées pour réaliser celui-ci.
