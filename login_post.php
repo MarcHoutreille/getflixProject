@@ -23,7 +23,7 @@
                 "avatar"=>$avatar
             );
 
-            header("location: account.php");
+            header("Location: account.php");
         }
         
     }
