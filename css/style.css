@@ -17,10 +17,10 @@ html, body {
 }
 
 body {
-    /* background-image: url("../images/bg-popcorn.jpg"); */
     background: rgb(235,63,140);
     background: linear-gradient(140deg, rgba(235,63,140,1) 0%, rgba(137,12,159,1) 35%, rgba(255,0,33,1) 100%);
-    
+    background-image: url("../images/bg-bandes-films.png");
+    background-size: 100%;
 }
 
 .container-fluid {
