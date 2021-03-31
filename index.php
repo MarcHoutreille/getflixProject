@@ -13,11 +13,13 @@
     <div class="container-fluid">
         <div class="row mb-4">
             <div class="col-md-12">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark static-top">
-                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                     <span class="navbar-toggler-icon"></span>
-                 </button>
-                    <a class="navbar-brand" href="#"><img src="images/GETFLIX-white-logo.png" alt="GETFLIX" class="logonav ml-3"></a>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+                    <a class="navbar-brand" href="#"><img src="images/GETFLIX-white-logo.png" alt="GETFLIX" class="logonav"></a>
+                    
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="navbar-nav ml-md-auto">
                             <li class="nav-item dropdown mr-3">
