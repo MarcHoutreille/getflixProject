@@ -1,0 +1,65 @@
+/** CSS du site GetFlix - copyright 2021 - BeCode **/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: #da4167;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+}
+
+body {
+    /* background-image: url("../images/bg-popcorn.jpg"); */
+    background: rgb(235,63,140);
+    background: linear-gradient(140deg, rgba(235,63,140,1) 0%, rgba(137,12,159,1) 35%, rgba(255,0,33,1) 100%);
+    
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    max-width: 20%;
+}
+.logonav {
+    max-width: 12%;
+}
+
+/** footer **/
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 10px 10px 10px;
+    margin: 0;
+    max-width: 100%;
+}
+    footer h6 {
+        color: white;
+    }
+    footer p, footer li, footer a.nav-link, address,.copy {
+        font-size: 0.8rem;
+    }
+    footer .copy {
+        text-decoration: overline white;
+    }
+    footer ul li {
+        list-style-type: none;
+        margin: 0;
+    }
+    footer a.nav-link, footer address .email, footer address .tel {
+        color: white;
+    }
+    footer a.nav-link {
+        padding: 0;
+        margin: 0;
+    }
