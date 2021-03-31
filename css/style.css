@@ -62,3 +62,13 @@ footer {
             text-align: right;
         }
     }
+    
+    @media (max-width: 768px){
+        .logo {
+            max-width: 50%;
+        }
+        form {
+            padding: 0 2rem;
+        }
+    }
+    
