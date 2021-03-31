@@ -43,7 +43,7 @@
                         <h1>Discover an unlimited films with <strong>GETFLIX</strong>... Watch anywhere!</h2>
                     </div>
                     <div class="col-md-12 text-center">
-                        <img src="images/GETFLIX-logo.png" alt="GETFLIX" class="logo mr-5"><img src="images/GETFLIX-white-logo.png" alt="GETFLIX" class="logo ml-5">
+                        <img src="images/GETFLIX-white-logo.png" alt="GETFLIX" class="logo ml-5">
                     </div>
                 </div>
                 <div class="row">
