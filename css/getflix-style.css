@@ -2,3 +2,18 @@ html
 {
     font-family:'Roboto', sans-serif;
 }
+
+@media (min-width: 0px){
+    #pcNavbar {
+        display: none;
+    }
+}
+
+@media (min-width:900px){
+    #phoneNavbar {
+        display: none;
+    }
+    #pcNavbar {
+        display: block;
+    }
+}
