@@ -43,23 +43,15 @@ footer {
     margin: 0;
     max-width: 100%;
 }
-    footer h6 {
-        color: white;
-    }
-    footer p, footer li, footer a.nav-link, address,.copy {
+    footer a {
         font-size: 0.8rem;
     }
     footer .copy {
         text-decoration: overline white;
     }
-    footer ul li {
-        list-style-type: none;
-        margin: 0;
-    }
-    footer a.nav-link, footer address .email, footer address .tel {
+    footer a:link, a:visited, a:hover, a:active {
         color: white;
     }
-    footer a.nav-link {
-        padding: 0;
-        margin: 0;
+    footer a:hover {
+        text-decoration: underline;
     }
