@@ -3,6 +3,13 @@ html
     font-family:'Roboto', sans-serif;
 }
 
+#phoneLogo{
+    width:30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media (min-width: 0px){
     #pcNavbar {
         display: none;
@@ -15,5 +22,8 @@ html
     }
     #pcNavbar {
         display: block;
+    }
+    #phoneLogo{
+        display: none;
     }
 }

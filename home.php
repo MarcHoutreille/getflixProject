@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/getflix-style.css">
     <title>Home</title>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
             <div class="col-">
-                <img src="" alt="" class="img-responsive">
+                <img src="img/getflix-logo.png" alt="getflix-logo" id="phoneLogo">
             </div>
         </div>
         <div class="row">
@@ -30,13 +31,13 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="..." alt="First slide">
+                            <img class="d-block w-100" src="https://placeimg.com/640/480/tech" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="..." alt="Second slide">
+                            <img class="d-block w-100" src="https://placeimg.com/640/480/tech" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="..." alt="Third slide">
+                            <img class="d-block w-100" src="https://placeimg.com/640/480/tech" alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -51,59 +52,63 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-3">
-                <img src="">
+            <h3> Les nouveautés</h3>
+            <div class="col-3">
+            <img src="https://placeimg.com/90/90/tech">
             </div>
-            <div class="col-sm-3">
-                <img src="">
+            <div class="col-3">
+            <img src="https://placeimg.com/90/90/tech">
             </div>
-            <div class="col-sm-3">
-                <img src="">
+            <div class="col-3">
+            <img src="https://placeimg.com/90/90/tech">
             </div>
-            <div class="col-sm-3">
-                <img src="">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-3">
-                <img src="">
-            </div>
-            <div class="col-sm-3">
-                <img src="">
-            </div>
-            <div class="col-sm-3">
-                <img src="">
-            </div>
-            <div class="col-sm-3">
-                <img src="">
+            <div class="col-3">
+            <img src="https://placeimg.com/90/90/tech">
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-3">
-                <img src="">
+        <h3> Les immanquables</h3>
+            <div class="col-3">
+            <img src="https://placeimg.com/90/90/tech">
             </div>
-            <div class="col-sm-3">
-                <img src="">
+            <div class="col-3">
+            <img src="https://placeimg.com/90/90/tech">
             </div>
-            <div class="col-sm-3">
-                <img src="">
+            <div class="col-3">
+            <img src="https://placeimg.com/90/90/tech">
             </div>
-            <div class="col-sm-3">
-                <img src="">
+            <div class="col-3">
+            <img src="https://placeimg.com/90/90/tech">
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-3">
-                <img src="">
+        <h3> Reprendre la lecture</h3>
+            <div class="col-3">
+            <img src="https://placeimg.com/90/90/tech">
             </div>
-            <div class="col-sm-3">
-                <img src="">
+            <div class="col-3">
+            <img src="https://placeimg.com/90/90/tech">
             </div>
-            <div class="col-sm-3">
-                <img src="">
+            <div class="col-3">
+            <img src="https://placeimg.com/90/90/tech">
             </div>
-            <div class="col-sm-3">
-                <img src="">
+            <div class="col-3">
+            <img src="https://placeimg.com/90/90/tech">
+            </div>
+        </div>
+        <div class="row">
+        <h3> Notre séléction pour vous</h3>
+            <div class="col-3">
+            <img src="https://placeimg.com/90/90/tech">
+            </div>
+            <div class="col-3">
+            <img src="https://placeimg.com/90/90/tech">
+            </div>
+            <div class="col-3">
+            <img src="https://placeimg.com/90/90/tech">
+            </div>
+            <div class="col-3">
+            <img src="https://placeimg.com/90/90/tech">
             </div>
         </div>
         <?php include('phone_navbar.php');?>
