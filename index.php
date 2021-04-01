@@ -1,84 +1,81 @@
-<!DOCTYPE html>
-<html lang="fr">
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/05be3ed2ff.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="css/getflix-style.css">
-    <title>GetFlix Project</title>
-
+    <script src="https://kit.fontawesome.com/5c3cdba868.js" crossorigin="anonymous"></script>
+    <script src="becool.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>GETFLIX</title>
 </head>
-
 <body>
-    <div class="container">
+    <div class="container-fluid">
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+                    <a class="navbar-brand" href="#"><img src="images/GETFLIX-white-logo.png" alt="GETFLIX" class="logonav"></a>
+                    
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="navbar-nav ml-md-auto">
+                            <li class="nav-item dropdown mr-3">
+                                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">More Infos</a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                     <a class="dropdown-item" href="#">Who are we?</a> <a class="dropdown-item" href="#">Conditions of registration</a> <a class="dropdown-item" href="#">Contact Us</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
         <div class="row">
-        <div class="col-12 col-lg-6">
-            <h2 class="text-center">Sign up</h2>
-            <form action="signup_post.php" method="post">
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="signup-email"><i class="fas fa-at"></i></span>
-                    <input type="text" class="form-control" placeholder="Give us your email" aria-label="email" aria-describedby="email" name="email">
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="signup-username"><i class="fas fa-user"></i></span>
-                    <input type="text" class="form-control" placeholder="Choose your username" aria-label="Username" aria-describedby="Username" name="username">
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="signup-password-1"><i class="fas fa-lock"></i></span>
-                    <input type="password" class="form-control" placeholder="Choose a password" id="signup-password" aria-label="Password" aria-describedby="Password" name="password">
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="signup-password-2"><i class="fas fa-lock"></i></span>
-                    <input type="password" class="form-control" placeholder="Repeat your password" id="signup-password" aria-label="Password" aria-describedby="Password" name="confirm">
-                </div>
-                <div class="mb-3">
-                    <button type="submit" class="btn btn-dark">Sign-up</button>
-                </div>
-            </form>
-        </div>
-        <div class="col-12 col-lg-6">
-            <h2 class="text-center">Login</h2>
-            <form action="login_post.php" method="post">
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="login-username"><i class="fas fa-user"></i></span>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="Username" name="username">
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="login-password"><i class="fas fa-lock"></i></span>
-                    <input type="password" class="form-control" placeholder="Password" id="login-password" aria-label="Password" aria-describedby="Password" name="password">
-                </div>
-                <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" value="" id="remember-me" name="remember-me">
-                    <label class="form-check-label" for="remember-me">
-                        Remember me ?
-                    </label>
-                </div>
-                <div class="mb-3">
-                    <button type="submit" class="btn btn-dark">Login</button>
-                </div>
-            </form>        
-            
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4">
 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1>Discover an unlimited films with <strong>GETFLIX</strong>... Watch anywhere!</h2>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <img src="images/GETFLIX-white-logo.png" alt="GETFLIX" class="logo">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <?php include("signup.php"); ?>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <?php include("login.php"); ?>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <?php include("footer.php"); ?>
+            </div>
         </div>
     </div>
-    </div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
-</script>
 
-<body>
-    
+    <!-- jQuery and Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </body>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-
 </html>
+
