@@ -1,3 +1,4 @@
+
 <?php
     $servername ="localhost";
     $username ="root";
@@ -18,5 +19,6 @@
         print "Erreur ! :" . $e->getMessage() . "\n";
         die();
     }
+
 
 ?>
