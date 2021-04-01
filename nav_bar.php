@@ -26,7 +26,7 @@
 
                 Home
             </a>
-            <form action="research.php" class="d-flex">
+            <form action="search_post.php" class="d-flex">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="search a movie" aria-label="search a movie" aria-describedby="search" name="search" size="50">
                     <a href="advanced-search.php" class="btn btn-outline-secondary" type="button" id="advanced-search">Advanced search</a>

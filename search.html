@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -17,9 +17,31 @@
 </head>
 
 <body>
-        
+    <div class="container-fluid">
+        <form action="search_post.php" method="POST">
+            <div class="input-group row mx-auto">
+                <div class="col-md-8 col-12 p-0">
+                    <input type="text" class="form-control" aria-label="Text input with segmented dropdown button"
+                        name="search" size="150">
+                </div>
+                <div class="col-md-3 col-12 p-0">
+                    <select class="form-select" id="options" name="advanced_options">
+                        <option selected>Choose an option</option>
+                        <option value="name" id="name">name</option>
+                        <option value="year" id="year">year</option>
+                        <option value="category" id="category">genre</option>
+                        <option value="language" id="language">language</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-dark col-md-1 col-12"><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
 </script>
+<script src="js/search_script.js"></script>
 </html>
