@@ -53,7 +53,7 @@
                     <div class="col-md-2">
                     </div>
                     <div class="col-md-3 text-center">
-                        <?php include("register.php"); ?>
+                        <?php include("signup.php"); ?>
                     </div>
                     <div class="col-md-2">
                     </div>
