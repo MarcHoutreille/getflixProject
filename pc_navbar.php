@@ -1,10 +1,7 @@
 <nav class="navbar navbar-light bg-light" id="pcNavbar">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php">
-            <!-- <img src="https://placekitten.com/60/40" alt="logo getflix project" width="60" height="40" class="d-inline-block align-text-middle"> -->
-            <img src="img/getflix-logo.png" alt="logo getflix project" width="102" height="92" class="d-inline-block align-text-middle">
-
-            Home
+            <img src="img/getflix-logo.png" alt="logo getflix project" width="102" height="92" class="d-inline-block align-text-middle"> Home
         </a>
         <form action="search_post.php" class="d-flex" id="navbar-pc" method="get">
             <div class="input-group">
