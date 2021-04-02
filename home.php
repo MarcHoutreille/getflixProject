@@ -54,26 +54,20 @@
             </div>
         </div>
         <div class="row">
-                
+
             <?php
-                    $response = $db->query('SELECT * FROM movies ORDER BY id DESC LIMIT 4');
-                    while ($data = $response->fetch()) {
-                    echo '<div data-id=' . $data['id'] . ' class="card bg-dark text-white col-sm-3" style="background-color:black">';
-                        // thumbnail will go here
-                        ?>
-                        <img src="<?php echo $data['thumbnail']; ?>" class="card-img" alt="<?php echo $data['title']; ?>">
-                        <?php
-                        echo  '<div class="card-img-overlay">';
-                        ?> 
-                            <!-- WRITE TXT MOVIES -->
-                            <h5 class="card-title" style="background-color:green"><?php echo $data['title']; ?></h5>
-                            <p class="card-text" style="background-color:blue"><?php echo $data['synopsis']; ?></p>
-                            <p class="card-text" style="background-color:yellow"><?php echo $data['duration'] . 'min.'; ?></p>                       
-                    <?php 
-                    echo '</div></div>';
+                $response = $db->query('SELECT * FROM movies ORDER BY id DESC LIMIT 4');
+                while ($data = $response->fetch()) {
+                    echo '
+                            <div data-id=' . $data['id'] . ' class="card text-black movie col-sm-3">
+                                <img src=' . $data['thumbnail'] . ' class="card-img" alt=' . $data['title'] . ' >
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">' . $data['title'] . '</h5>
+                                    <p class="card-text text-black">' . $data['synopsis'] . '</p>
+                                    <p class="card-text">' . $data['duration'] . ' min</p>
+                            </div></div>';
                 }
             ?>
-
 
 
                 <!-- 
