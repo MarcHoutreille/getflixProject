@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/getflix-style.css">
     <title>Home</title>
 </head>
@@ -55,98 +56,33 @@
             </div>
         </div>
         <div class="row">
-                
+
             <?php
-                    $response = $db->query('SELECT * FROM movies ORDER BY id DESC LIMIT 4');
-                    while ($data = $response->fetch()) {
-                    echo '<div data-id=' . $data['id'] . ' class="card bg-dark text-white col-sm-3">';
-                        // thumbnail will go here
-                        ?>
-                        <img src="<?php echo $data['thumbnail']; ?>" class="card-img" alt="<?php echo $data['title']; ?>">
-                        <?php
-                        echo  '<div class="card-img-overlay">';
-                        ?> 
-                            <!-- WRITE TXT MOVIES -->
-                            <h5 class="card-title"><?php echo $data['title']; ?></h5>
-                            <p class="card-text"><?php echo $data['synopsis']; ?></p>
-                            <p class="card-text"><?php echo $data['duration'] . 'min.'; ?></p>                       
-                    <?php 
-                    echo '</div></div>';
-                }
+            $response = $db->query('SELECT * FROM movies ORDER BY id DESC LIMIT 4');
+            while ($data = $response->fetch()) {
+                echo '
+                        <div data-id=' . $data['id'] . ' class=" movie bg-dark m-1 card text-white movie col">
+                        <img src=' . $data['thumbnail'] . ' class="card-img overlay" alt=' . $data['title'] . ' >
+                        <div class="card-img-overlay ">
+                        <h5 class="card-title">' . $data['title'] . '</h5>
+                                <p class="card-text ">' . $data['synopsis'] . '</p>
+                                <p class="card-text">' . $data['duration'] . ' min</p>
+                                </div></div>';
+            }
             ?>
-
-
-
-                <!-- 
-            <h3> Les nouveautés</h3>
-            <div class="col-3">
-                <img src="https://placeimg.com/90/90/tech">
-            </div>
-            <div class="col-3">
-                <img src="https://placeimg.com/90/90/tech">
-            </div>
-            <div class="col-3">
-                <img src="https://placeimg.com/90/90/tech">
-            </div>
-            <div class="col-3">
-                <img src="https://placeimg.com/90/90/tech">
-            </div>
-        </div>
-        <div class="row">
-            <h3> Les immanquables</h3>
-            <div class="col-3">
-                <img src="https://placeimg.com/90/90/tech">
-            </div>
-            <div class="col-3">
-                <img src="https://placeimg.com/90/90/tech">
-            </div>
-            <div class="col-3">
-                <img src="https://placeimg.com/90/90/tech">
-            </div>
-            <div class="col-3">
-                <img src="https://placeimg.com/90/90/tech">
-            </div>
-        </div>
-        <div class="row">
-            <h3> Reprendre la lecture</h3>
-            <div class="col-3">
-                <img src="https://placeimg.com/90/90/tech">
-            </div>
-            <div class="col-3">
-                <img src="https://placeimg.com/90/90/tech">
-            </div>
-            <div class="col-3">
-                <img src="https://placeimg.com/90/90/tech">
-            </div>
-            <div class="col-3">
-                <img src="https://placeimg.com/90/90/tech">
-            </div>
-        </div>
-        <div class="row">
-            <h3> Notre séléction pour vous</h3>
-            <div class="col-3">
-                <img src="https://placeimg.com/90/90/tech">
-            </div>
-            <div class="col-3">
-                <img src="https://placeimg.com/90/90/tech">
-            </div>
-            <div class="col-3">
-                <img src="https://placeimg.com/90/90/tech">
-            </div>
-            <div class="col-3">
-                <img src="https://placeimg.com/90/90/tech">
-            </div>
         </div>
 
-        <?php include('phone_navbar.php');?>
 
-    </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-    </script>
+
+
+        <?php include('phone_navbar.php'); ?>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
