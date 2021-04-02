@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <?php include(connexion-db.php); ?>
+    <?php include("connexion-db.php"); ?>
 
     <div class="container-fluid">
         <div class="row">
@@ -77,7 +77,7 @@
 
 
 
-
+                <!-- 
             <h3> Les nouveautés</h3>
             <div class="col-3">
             <img src="https://placeimg.com/90/90/tech">
@@ -137,6 +137,7 @@
             <img src="https://placeimg.com/90/90/tech">
             </div>
         </div>
+            -->
         <?php include('phone_navbar.php');?>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
