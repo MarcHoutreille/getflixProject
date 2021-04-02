@@ -15,6 +15,8 @@ echo '<table class="table">
 while ($movie = $req->fetch()) {
     echo "<tr>" . $movie['title'] . " " .  $movie['duration'] . " minutes </tr> ";
 }   
+
+
 /* echo '<table class="table">
 <thead class="table-dark">
   <tr>
