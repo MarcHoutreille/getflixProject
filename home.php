@@ -10,6 +10,9 @@
     <title>Home</title>
 </head>
 <body>
+
+    <?php include(connexion-db.php); ?>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-">
@@ -52,6 +55,29 @@
             </div>
         </div>
         <div class="row">
+                
+            <?php
+                    $response = $db->query('SELECT * FROM movies ORDER BY id DESC LIMIT 4');
+                    while ($data = $response->fetch()) {
+                    echo '<div data-id=' . $data['id'] . ' class="card bg-dark text-white col-sm-3">';
+                        // thumbnail will go here
+                        ?>
+                        <img src="<?php echo $data['thumbnail']; ?>" class="card-img" alt="<?php echo $data['title']; ?>">
+                        <?php
+                        echo  '<div class="card-img-overlay">';
+                        ?> 
+                            <!-- WRITE TXT MOVIES -->
+                            <h5 class="card-title"><?php echo $data['title']; ?></h5>
+                            <p class="card-text"><?php echo $data['synopsis']; ?></p>
+                            <p class="card-text"><?php echo $data['duration'] . 'min.'; ?></p>                       
+                    <?php 
+                    echo '</div></div>';
+                }
+            ?>
+
+
+
+
             <h3> Les nouveautés</h3>
             <div class="col-3">
             <img src="https://placeimg.com/90/90/tech">
