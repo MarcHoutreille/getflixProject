@@ -2,6 +2,7 @@
     include("connexion_db_perso.php");
     // include("connexion_db.php");
 
+    //recherche par titre via barre de recherche de la nav bar
     if(isset($_GET["search"]) && !empty($_GET["search"]))
     {
         $search=$_GET["search"];
@@ -29,7 +30,22 @@
 ?>
 
                     
-                    <?php
-                        
-                    ?>
+<?php
+     //recherche avancée
+     //voir pour appeler différemment le search dans le form ? advanced-search
+     
+     if(isset($_GET["advanced-search"]) && !empty($_GET["advanced-search"]))
+    {
+        $search=$_GET["search"];
+        
+        echo $search;
+        //mettre les elements du select ! 
+        if($_GET["advanced_options" == "name"]) 
+        {
+
+        }
+
+    }
+    
+?>
 

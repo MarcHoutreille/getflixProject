@@ -1,6 +1,6 @@
 <?php 
       // si on est sur la page de rechercha avancée masquer la barre en haut (mettre un h1 recherche avancée ?) et en afficher une autre
-      include("search.php");    
+    //   include("search.php");    
 ?>
 
 <!DOCTYPE html>
@@ -21,13 +21,14 @@
 
 </head>
 
-<body>
-    <div class="container-fluid">
-        <form action="search_post.php" method="POST">
+<body onload="replaceNavBar()">
+<?php include("pc_navbar.php")?>
+    <div class="container-fluid mt-5">
+        <form action="search_get.php" method="GET">
             <div class="input-group row mx-auto">
-                <div class="col-md-8 col-12 p-0">
-                    <input type="text" class="form-control" aria-label="Text input with segmented dropdown button"
-                        name="search" size="150">
+                <div id="search-input-container" class="col-md-8 col-12 p-0">
+                    <input id ="search-input" type="text" class="form-control" aria-label="Text input with segmented dropdown button"
+                        name="advanced-search" size="150">
                 </div>
                 <div class="col-md-3 col-12 p-0">
                     <select class="form-select" id="options" name="advanced_options">
