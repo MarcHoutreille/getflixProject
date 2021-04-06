@@ -5,7 +5,7 @@
         </a>
         <form action="search_get.php" class="d-flex" id="pc-search-bar" method="get">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="search a movie" aria-label="search a movie" aria-describedby="search" name="search" size="50">
+                <input type="text" class="form-control" placeholder="Looking for something...?" aria-label="search a movie" aria-describedby="search" name="search" size="50">
                 <a href="search.php" class="btn btn-outline-secondary" type="button" id="advanced-search">Advanced search</a>
                 <button type="submit" class="btn btn-dark" type="button" id="search"><i class="fa fa-search"></i></button>
             </div>

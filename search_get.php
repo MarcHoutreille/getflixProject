@@ -7,16 +7,19 @@
     {
         $search=$_GET["search"];
         
-        echo $search;
+        echo "Recherche : " .$search;
 
-        $liste_films = $db->prepare("SELECT * FROM movies WHERE title = ? ORDER BY title");
-        $liste_films -> execute (array($search));
-                        
+        // $liste_films = $db->prepare("SELECT * FROM movies WHERE title = ? ORDER BY title");
+        // $liste_films -> execute (array($search));
+        $liste_films = $db->prepare("SELECT * FROM movies WHERE title = ? || category = ? || synopsis LIKE CONCAT( '%',?,'%') ORDER BY title");
+        $liste_films->execute(array($search,$search,$search));
+
+         // to do mercredi : les afficher sous formes de card bootstrap                
                         while ($un_film = $liste_films -> fetch())
                         {
                             ?>
                             <ul>
-                                <li><?php echo $un_film['id_movie']?></li>
+                                <li><?php echo $un_film['id']?></li>
                                 <li><?php echo $un_film['title']?></li>
                                 <li><?php echo $un_film['year']?></li>
                                 <li><?php echo $un_film['category']?></li>
