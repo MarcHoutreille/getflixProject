@@ -54,14 +54,15 @@
             </div>
         </div>
         <div class="row">
-
+        
+            <h3> Les nouveautés</h3>
             <?php
                 $response = $db->query('SELECT * FROM movies ORDER BY id DESC LIMIT 4');
                 while ($data = $response->fetch()) {
                     echo '
-                            <div data-id=' . $data['id'] . ' class="card text-black movie col-sm-3">
+                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-3 px-0 mb-5">
                                 <img src=' . $data['thumbnail'] . ' class="card-img" alt=' . $data['title'] . ' >
-                                <div class="card-img-overlay">
+                                <div class="card-img-overlay" style="text-overflow: ellipsis;">
                                     <h5 class="card-title">' . $data['title'] . '</h5>
                                     <p class="card-text text-black">' . $data['synopsis'] . '</p>
                                     <p class="card-text">' . $data['duration'] . ' min</p>
@@ -69,9 +70,8 @@
                 }
             ?>
 
-
                 <!-- 
-            <h3> Les nouveautés</h3>
+            
             <div class="col-3">
             <img src="https://placeimg.com/90/90/tech">
             </div>
