@@ -11,11 +11,19 @@ html
 }
 
 .viewTxt {
-    background-color: rgba(0, 0, 0, .0);
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.0);
     cursor: pointer;
+    opacity: 0.0;
 }
 .viewTxt:hover {
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 1.0;
+}
+.viewTxt h5 {
+    background-color:black;
+    opacity: 1.0;
+    padding: 2px 5px;
 }
 
 @media (min-width: 0px){
