@@ -62,7 +62,7 @@
                     echo '
                             <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-3 px-0 mb-5">
                                 <img src=' . $data['thumbnail'] . ' class="card-img" alt=' . $data['title'] . ' >
-                                <div class="card-img-overlay" style="text-overflow: ellipsis;">
+                                <div class="card-img-overlay">
                                     <h5 class="card-title">' . $data['title'] . '</h5>
                                     <p class="card-text text-black">' . $data['synopsis'] . '</p>
                                     <p class="card-text">' . $data['duration'] . ' min</p>
