@@ -57,7 +57,7 @@
 
             <h3>Les nouveautés</h3>
             <?php
-                $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies ORDER BY id DESC LIMIT 4");
+                $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies WHERE category = 'Gangsters' ORDER BY category DESC LIMIT 4");
                 while ($data = $response->fetch()) {
                     echo '  
                             <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-3 px-0">
@@ -74,7 +74,7 @@
                 
             <h3> Les immanquables</h3>
             <?php
-                $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies ORDER BY id DESC LIMIT 4");
+                $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies WHERE category = 'Science-fiction' ORDER BY category DESC LIMIT 4");
                 while ($data = $response->fetch()) {
                     echo '  
                             <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-3 px-0">
@@ -91,7 +91,7 @@
         
             <h3> Reprendre la lecture</h3>
             <?php
-                $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies ORDER BY id DESC LIMIT 4");
+                $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies WHERE category = 'Drame' ORDER BY category DESC LIMIT 4");
                 while ($data = $response->fetch()) {
                     echo '  
                             <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-3 px-0">
@@ -108,7 +108,7 @@
 
             <h3> Notre séléction pour vous</h3>
             <?php
-                $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies ORDER BY id DESC LIMIT 4");
+                $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies WHERE category = 'Fantasy' ORDER BY category DESC LIMIT 4");
                 while ($data = $response->fetch()) {
                     echo '  
                             <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-3 px-0">
