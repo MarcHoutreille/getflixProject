@@ -10,6 +10,14 @@ html
     margin-right: auto;
 }
 
+.viewTxt {
+    background-color: rgba(0, 0, 0, .0);
+    cursor: pointer;
+}
+.viewTxt:hover {
+    background-color: rgba(0, 0, 0, .6);
+}
+
 @media (min-width: 0px){
     #pcNavbar {
         display: none;
