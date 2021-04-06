@@ -66,7 +66,7 @@
                 while ($data = $response->fetch()) {
                     echo '
                             <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-3 px-0 mb-5">
-                                <img src=images/' . $data['thumbnail'] . ' class="card-img" alt=' . $data['title'] . ' >
+                                <img src=' . $data['thumbnail'] . ' class="card-img" alt=' . $data['title'] . ' >
                                 <div class="card-img-overlay viewTxt">
                                     <h5 class="card-title text-white">' . $data['title'] . '</h5>
                                     <p class="card-text text-white">' . $data['shortened_synopsis'] . '(...)</p>
