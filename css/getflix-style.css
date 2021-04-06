@@ -97,6 +97,15 @@ input#remember-me
     float: none;
 }
 
+/*-----------------------------HOME----------------------------------*/
+
+.viewTxt {
+    background-color: rgba(0, 0, 0, .0);
+    cursor: pointer;
+}
+.viewTxt:hover {
+    background-color: rgba(0, 0, 0, .6);
+}
 /*-----------------------------FOOTER----------------------------*/
 
 footer {
