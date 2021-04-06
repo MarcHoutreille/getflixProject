@@ -60,18 +60,19 @@
         </div>
         <div class="row">
 
-            <h3> Les nouveautés</h3>
+            <h3>Les nouveautés</h3>
             <?php
-                $response = $db->query('SELECT * FROM movies ORDER BY id DESC LIMIT 4');
+                $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,200) AS shortened_synopsis , duration, url, language FROM movies ORDER BY id DESC LIMIT 4");
                 while ($data = $response->fetch()) {
                     echo '
                             <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-3 px-0 mb-5">
                                 <img src=images/' . $data['thumbnail'] . ' class="card-img" alt=' . $data['title'] . ' >
                                 <div class="card-img-overlay viewTxt">
                                     <h5 class="card-title text-white">' . $data['title'] . '</h5>
-                                    <p class="card-text text-white">' . $data['synopsis'] . '</p>
+                                    <p class="card-text text-white">' . $data['shortened_synopsis'] . '(...)</p>
                                     <p class="card-text text-white">' . $data['duration'] . ' min</p>
-                            </div></div>';
+                                </div>
+                            </div>';
                 }
             ?>
 
