@@ -10,6 +10,15 @@
                 <button type="submit" class="btn btn-dark" type="button" id="search"><i class="fa fa-search"></i></button>
             </div>
         </form>
-        <a href="account.php" class=""><i class="fa fa-user fs-3 border borde-3 rounded-circle p-3 bg-white"></i></a>
+        <a href="user-account.php" class="">
+            <?php 
+                if (isset($_SESSION['avatar']))
+                {
+                    echo "<img src='" . $_SESSION['avatar'] . "' alt='user-avatar'/>";
+                }
+            ?>                
+
+            <i class="fa fa-user fs-3 border borde-3 rounded-circle p-3 bg-white"></i>
+        </a>
     </div>
 </nav>
