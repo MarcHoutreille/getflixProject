@@ -10,7 +10,7 @@
                 <button type="submit" class="btn btn-dark" type="button" id="search"><i class="fa fa-search"></i></button>
             </div>
         </form>
-        <a href="user-account.php" class="">
+        <a href="user_account.php" class="">
             <?php 
                 if (isset($_SESSION['avatar']))
                 {

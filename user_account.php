@@ -1,5 +1,37 @@
-<? php 
-    
+<?php 
+    session_start();
+
+    if (
+            (
+                (isset($_POST['old-password'])) 
+                & 
+                (isset($_POST['new-password'])) 
+                & 
+                (isset($_POST['confirm'])) 
+                & 
+                !empty($_POST['old-password']) 
+                & 
+                !empty($_POST['new-password'])
+                & 
+                !empty($_POST['confirm'])
+            )
+        )
+    {
+        // Vérif que le nouveau mot de passe et sa confirmation sont les même
+        if ($_POST['new-password'] != $_POST['confirm']) 
+        {
+            $error_message = "The two passwords don't match...";
+        }
+
+        //vérif que le nouveau mot de passe n'est pas le même que l'ancien
+        if ($_POST['old-password'] == $_POST['new-password'] || $_POST['old-password'] == $_POST['confirm'])
+        {
+            $error_message = "You can't make a change to use the same password !";
+        }
+
+        // vérifier que l'ancien mot de passe est bien le bon WIP ! 
+        //$isPasswordCorrect = password_verify($_POST['password'], $resultat['password']);
+    }
 
 ?>
 <!DOCTYPE html>
@@ -9,22 +41,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/05be3ed2ff.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/getflix-style.css">
-    <title>User</title>
+    <title>GETFLIX * User Account</title>
 </head>
 
 <body>
     <?php include('pc_navbar.php'); ?>
-    <h1 class="text-center">Edit profile</h1>
+    <h1 class="text-center my-5">Hello, <?php echo $_SESSION["username"]; ?> ! Do you want to edit profile ?</h1>
     <div class="container mb-5">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Edit password
                     </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div id="collapseOne" class="accordion-collapse <?php if (empty($_POST)) {echo 'collapse';
+                    # code...
+                }?>" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <h2 class="text-center mb-3">Change your password</h2>  
                         <form action="" method="post">
@@ -44,7 +81,7 @@
                             <?php
                                 if(isset($error_message))
                                 {
-                                    echo "<p class='error-message'>" . $error_message . "</p>";
+                                    echo "<p class='error-message text-danger'>" . $error_message . "</p>";
                                 }
                             
                             ?>

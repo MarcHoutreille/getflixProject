@@ -1,5 +1,7 @@
 <?php 
-    include("connexion-db.php");
+
+    include("connexion_db_perso.php");
+    // include("connexion_db.php");
 
     
 
@@ -7,7 +9,7 @@
     {
         $username = strtolower($_POST['username']);
         $password = $_POST['password'];
-        $req = $db->prepare('SELECT id, password FROM users WHERE username = :username');
+        $req = $db->prepare('SELECT * FROM users WHERE username = :username');
         $req->execute(array('username' => $username));
         $resultat = $req->fetch();
         // Comparaison du pass envoyé via le formulaire avec la base
@@ -17,7 +19,20 @@
             echo "<div style='padding-top:17%' class='text-center'>";
             echo "ok";
             echo "</div>";
-        } else {
+            session_start();
+
+            $_SESSION["username"] = $resultat['username'];
+            $_SESSION["email"] = $resultat ['email'];
+            $_SESSION["id_avatar"] = $resultat['id_avatar'];
+            
+            // echo $_SESSION["username"];
+            // echo $_SESSION["email"];
+            // echo $_SESSION["id_avatar"];
+
+
+            header("Location: user_account.php");
+        } else 
+        {
             echo "not ok";
         }
 
