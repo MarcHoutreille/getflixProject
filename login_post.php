@@ -22,7 +22,8 @@
             session_start();
 
             $_SESSION["username"] = $resultat['username'];
-            $_SESSION["email"] = $resultat ['email'];
+            $_SESSION["email"] = $resultat['email'];
+            $_SESSION["password_hash"] = $resultat['password'];
             $_SESSION["id_avatar"] = $resultat['id_avatar'];
             
             // echo $_SESSION["username"];

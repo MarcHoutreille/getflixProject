@@ -24,13 +24,29 @@
         }
 
         //vérif que le nouveau mot de passe n'est pas le même que l'ancien
-        if ($_POST['old-password'] == $_POST['new-password'] || $_POST['old-password'] == $_POST['confirm'])
+        else if ($_POST['old-password'] == $_POST['new-password'] || $_POST['old-password'] == $_POST['confirm'])
         {
             $error_message = "You can't make a change to use the same password !";
         }
 
         // vérifier que l'ancien mot de passe est bien le bon WIP ! 
-        //$isPasswordCorrect = password_verify($_POST['password'], $resultat['password']);
+        else if (password_verify($_POST['old-password'], $_SESSION["password_hash"]) == false)
+        {
+            $error_message = "Your current password is incorrect";
+            // A voir avec Marc pour la question de la sécurité";
+
+        }
+        else
+        {
+            $new_password_hash = password_hash($_POST['new-password'], PASSWORD_DEFAULT);
+            
+            $req = $db->prepare ('UPDATE users SET password = ? WHERE nickname = ?');
+            
+            $req -> execute (array($new_password_hash, $_SESSION["username"]));
+            //faire une condition pour verifer que ca a bien été fait et afficher quelque part que ca a été fait.
+        }
+
+        
     }
 
 ?>
