@@ -1,6 +1,7 @@
 <?php 
     session_start();
-
+    include("connexion_db_perso.php");
+    
     if (
             (
                 (isset($_POST['old-password'])) 
@@ -39,7 +40,7 @@
         else
         {
             $new_password_hash = password_hash($_POST['new-password'], PASSWORD_DEFAULT);
-            
+
             $req = $db->prepare ('UPDATE users SET password = ? WHERE nickname = ?');
             
             $req -> execute (array($new_password_hash, $_SESSION["username"]));
