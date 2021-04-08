@@ -42,7 +42,7 @@
                         }
                     ?>
                     <div class="col-sm-2 p-3">
-                        <label class="form-check-label" for="">Your choice is: <?php  ?></label><button type="submit" name="loadAvatar" class="btn btn-outline-secondary" aria-label="send_button">validate</button>
+                        <label class="form-check-label" for="">Your choice is: <?php  ?></label><br><button type="submit" name="loadAvatar" class="btn btn-outline-secondary" aria-label="send_button">validate</button>
                     </div>
             </div>
         </form>
