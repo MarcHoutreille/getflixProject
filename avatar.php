@@ -23,19 +23,26 @@
                 <?php include('pc_navbar.php'); ?>
             </div>
         </div>
-        <div class="row my-3">
+        <form action="" method="POST">
+            <div class="row my-3">
 
-            <h3>Choisissez votre Avatar</h3>
-            <?php
-                $response = $db->query('SELECT * FROM avatar ORDER BY id DESC LIMIT 6');
-                while ($data = $response->fetch()) {
-                    echo '  
-                            <div data-id=' . $data['id'] . ' class="card col-sm-2 p-3">
-                                <a href="#"><img src=' . $data['image'] . ' class="card-img" alt="Votre avatar"></a>
-                            </div>';
-                }
-            ?>
-        </div>
+                <h3>Choisissez votre Avatar</h3>
+                
+                    <?php
+                        $response = $db->query('SELECT * FROM avatar ORDER BY id DESC LIMIT 6');
+                        while ($data = $response->fetch()) {
+                            echo '  
+                                    <div data-id=' . $data['id'] . ' class="card col-sm-2 p-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="avatar_' . $data['id'] . '" id=' . $data['id'] . ' value="avatar_1">
+                                            <label class="form-check-label" for="avatar_' . $data['id'] . '">Avatar ' . $data['id'] . '</label>
+                                        </div>
+                                        <a href="#"><img src=' . $data['image'] . ' class="card-img" alt="Votre avatar"></a>
+                                    </div>';
+                        }
+                    ?>
+            </div>
+        </form>
         
         <?php include('phone_navbar.php');?>
     </div>
