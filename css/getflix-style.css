@@ -110,7 +110,7 @@ input#remember-me
     opacity: 1.0;
 }
 .viewTxt h5 {
-    background-color:black;
+   /* background-color:black; */
     opacity: 1.0;
     padding: 2px 5px;
 }
@@ -122,7 +122,7 @@ footer {
     padding: 20px 10px 10px 10px;
     position:relative;
     bottom: 0;
-    
+
 }
 
 footer a {
