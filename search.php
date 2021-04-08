@@ -1,3 +1,7 @@
+<?php 
+      include("search_get.php");    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,16 +20,16 @@
 
 </head>
 
-<body>
-    <div class="container-fluid">
-        <form action="search_post.php" method="POST">
+<body onload="replaceNavBar()">
+<?php include("pc_navbar.php")?>
+    <div class="container-fluid mt-5">
+        <form action="" method="GET">
             <div class="input-group row mx-auto">
-                <div class="col-md-8 col-12 p-0">
-                    <input type="text" class="form-control" aria-label="Text input with segmented dropdown button"
-                        name="search" size="150">
+                <div id="search-input-container" class="col-md-8 col-12 p-0">
+                    <input id ="search-input" type="text" class="form-control" aria-label="Research by name" name="advanced-search" placeholder="Looking for a movie ?">
                 </div>
                 <div class="col-md-3 col-12 p-0">
-                    <select class="form-select" id="options" name="advanced_options">
+                    <select class="form-select" id="options" name="advanced_options" onchange="replaceInputs(this.value)">
                         <option selected>Choose an option</option>
                         <option value="name" id="name">name</option>
                         <option value="year" id="year">year</option>
