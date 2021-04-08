@@ -1,0 +1,74 @@
+/** CSS du site GetFlix - copyright 2021 - BeCode **/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: #da4167;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+}
+
+body {
+    background: rgb(235,63,140);
+    background: linear-gradient(140deg, rgba(235,63,140,1) 0%, rgba(137,12,159,1) 35%, rgba(255,0,33,1) 100%);
+    background-image: url("../images/bg-bandes-films.png");
+    background-size: 100%;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    max-width: 20%;
+}
+.logonav {
+    max-width: 12%;
+    margin-left: 20px;
+}
+
+/** footer **/
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 10px 10px 10px;
+    margin: 0;
+    max-width: 100%;
+}
+    footer a {
+        font-size: 0.8rem;
+    }
+    footer .copy {
+        text-decoration: overline white;
+    }
+    footer a:link,footer a:visited,footer a:hover,footer a:active {
+        color: white;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 992px){
+        .navbar-brand {
+            text-align: right;
+        }
+    }
+    
+    @media (max-width: 768px){
+        .logo {
+            max-width: 50%;
+        }
+        form {
+            padding: 0 2rem;
+        }
+    }
+    

@@ -9,7 +9,7 @@
     {
         $username = strtolower($_POST['username']);
         $password = $_POST['password'];
-        $req = $db->prepare('SELECT * FROM users WHERE username = :username');
+        $req = $db->prepare('SELECT id, password FROM users WHERE username = :username');
         $req->execute(array('username' => $username));
         $resultat = $req->fetch();
         // Comparaison du pass envoyé via le formulaire avec la base

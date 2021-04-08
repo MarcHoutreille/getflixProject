@@ -18,9 +18,9 @@
 
 <body>
     <!-- nav bar laptop !  -->
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light" id="pcNavbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">
+            <a class="navbar-brand" href="home.php">
                 <!-- <img src="https://placekitten.com/60/40" alt="logo getflix project" width="60" height="40" class="d-inline-block align-text-middle"> -->
                 <img src="img/getflix-logo.png" alt="logo getflix project" width="102" height="92" class="d-inline-block align-text-middle">
 
@@ -33,17 +33,17 @@
                     <button class="btn btn-dark" type="button" id="search"><i class="fa fa-search"></i></button>
                 </div>
             </form>
-            <a href="account.php" class=""><i class="fa fa-user fs-3 border borde-3 rounded-circle p-3 bg-white"></i></a>
+            <a href="user.php" class=""><i class="fa fa-user fs-3 border borde-3 rounded-circle p-3 bg-white"></i></a>
         </div>
     </nav>
 <hr>
 
     <!-- nav bar smartphone -->
-    <nav class="navbar navbar-light bg-light rounded-top rounded-3">
+    <!-- <nav class="navbar navbar-light bg-light rounded-top rounded-3" id="phoneNavbar">
         <a href="index.php"><i class="fa fa-home mx-3 fs-2"></i></a>
         <a href="search.php"><i class="fa fa-search mx-3 fs-2"></i></a>
         <a href="account.php"><i class="fa fa-user mx-3 fs-2"></i></a>        
-    </nav>
+    </nav> -->
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
