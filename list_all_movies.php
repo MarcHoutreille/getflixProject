@@ -1,5 +1,5 @@
 <?php
-include("connexion-db.php");
+include("connexion_db.php");
 $req = $db->query('SELECT * FROM movies ORDER BY title ASC');
 echo '<table class="table">
 <thead class="table-dark">
