@@ -10,6 +10,9 @@
 </head>
 
 <body>
+
+    <?php include("connexion-db.php"); ?>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-">
@@ -52,6 +55,29 @@
             </div>
         </div>
         <div class="row">
+                
+            <?php
+                    $response = $db->query('SELECT * FROM movies ORDER BY id DESC LIMIT 4');
+                    while ($data = $response->fetch()) {
+                    echo '<div data-id=' . $data['id'] . ' class="card bg-dark text-white col-sm-3">';
+                        // thumbnail will go here
+                        ?>
+                        <img src="<?php echo $data['thumbnail']; ?>" class="card-img" alt="<?php echo $data['title']; ?>">
+                        <?php
+                        echo  '<div class="card-img-overlay">';
+                        ?> 
+                            <!-- WRITE TXT MOVIES -->
+                            <h5 class="card-title"><?php echo $data['title']; ?></h5>
+                            <p class="card-text"><?php echo $data['synopsis']; ?></p>
+                            <p class="card-text"><?php echo $data['duration'] . 'min.'; ?></p>                       
+                    <?php 
+                    echo '</div></div>';
+                }
+            ?>
+
+
+
+                <!-- 
             <h3> Les nouveautés</h3>
             <div class="col-3">
                 <img src="https://placeimg.com/90/90/tech">
@@ -111,13 +137,17 @@
                 <img src="https://placeimg.com/90/90/tech">
             </div>
         </div>
+
         <?php include('phone_navbar.php'); ?>
+
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
     </script>
 </body>
 
