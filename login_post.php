@@ -30,7 +30,7 @@ include("connexion_db.php");
             // echo $_SESSION["id_avatar"];
 
 
-            header("Location: user_account.php");
+            header("Location: home.php");
         } else 
         {
             echo "not ok";
