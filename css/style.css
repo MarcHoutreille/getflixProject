@@ -33,7 +33,7 @@ body {
 }
 .logonav {
     max-width: 12%;
-    margin-left: 2rem;
+    margin-left: 20px;
 }
 
 /** footer **/
@@ -50,7 +50,7 @@ footer {
     footer .copy {
         text-decoration: overline white;
     }
-    footer a:link, a:visited, a:hover, a:active {
+    footer a:link,footer a:visited,footer a:hover,footer a:active {
         color: white;
     }
     footer a:hover {

@@ -1,24 +1,8 @@
 
 <?php
-    $servername ="localhost";
-    $username ="root";
-    $password = "YbZbgfEnjB*aMK4Q";
-    try 
-    {
-        $db = new PDO
-        (
-            "mysql:host=$servername;
-            dbname=getflix_project",
-            $username,
-            $password,            
-        );
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
-    catch (PDOException $e)
-    {
-        print "Erreur ! :" . $e->getMessage() . "\n";
-        die();
-    }
-
-
+try {
+    $db = new PDO('mysql:host=localhost;dbname=getflix_project', 'root', 'YbZbgfEnjB*aMK4Q', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+} catch (Exception $e) /* error handling */ {
+    die('Erreur');
+}
 ?>
