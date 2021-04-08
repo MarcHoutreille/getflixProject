@@ -1,5 +1,7 @@
 <?php 
-    include("connexion-db.php");
+
+    include("connexion_db_perso.php");
+    // include("connexion_db.php");
 
     
 
@@ -17,7 +19,21 @@
             echo "<div style='padding-top:17%' class='text-center'>";
             echo "ok";
             echo "</div>";
-        } else {
+            session_start();
+
+            $_SESSION["username"] = $resultat['username'];
+            $_SESSION["email"] = $resultat['email'];
+            $_SESSION["password_hash"] = $resultat['password'];
+            $_SESSION["id_avatar"] = $resultat['id_avatar'];
+            
+            // echo $_SESSION["username"];
+            // echo $_SESSION["email"];
+            // echo $_SESSION["id_avatar"];
+
+
+            header("Location: user_account.php");
+        } else 
+        {
             echo "not ok";
         }
 
