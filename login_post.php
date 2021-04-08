@@ -20,6 +20,7 @@ include("connexion_db.php");
             echo "</div>";
             session_start();
 
+            $_SESSION['user_id'] = $resultat['id'];
             $_SESSION["username"] = $resultat['username'];
             $_SESSION["email"] = $resultat['email'];
             $_SESSION["password_hash"] = $resultat['password'];
