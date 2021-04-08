@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    include("connexion_db.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +14,6 @@
 </head>
 <body>
 
-    <?php include("connexion_db.php"); ?>
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-">
@@ -23,26 +25,26 @@
                 <?php include('pc_navbar.php'); ?>
             </div>
         </div>
-        <form action="" method="POST">
+        <h3>Choisissez votre Avatar</h3>
+        <form action="change_avatar.php" method="POST">
             <div class="row my-3">
-
-                <h3>Choisissez votre Avatar</h3>
-                
+            
                     <?php
-                        $response = $db->query('SELECT * FROM avatar ORDER BY id DESC LIMIT 6');
+                        $response = $db->query('SELECT * FROM avatar ORDER BY id ASC LIMIT 6');
                         while ($data = $response->fetch()) {
+                            $idAvatar = $data['id'];
                             echo '  
                                     <div data-id=' . $data['id'] . ' class="card col-sm-2 p-3">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="avatar_' . $data['id'] . '" id=' . $data['id'] . ' value="avatar_1">
-                                            <label class="form-check-label" for="avatar_' . $data['id'] . '">Avatar ' . $data['id'] . '</label>
+                                            <input class="form-check-input" type="radio" name="avatar" id=' . $data['id'] . ' value=' . $idAvatar . '>
+                                            <label class="form-check-label" for="">Avatar ' . $data['id'] . '</label>
                                         </div>
-                                        <a href="#"><img src=' . $data['image'] . ' class="card-img" alt="Votre avatar"></a>
+                                        <img src=' . $data['image'] . ' class="card-img" alt="avatar">
                                     </div>';
                         }
                     ?>
                     <div class="col-sm-2 p-3">
-                        <label class="form-check-label" for="">Your choice is: <?php  ?></label><br><button type="submit" name="loadAvatar" class="btn btn-outline-secondary" aria-label="send_button">validate</button>
+                        <button type="submit" name="loadAvatar" class="btn btn-light" aria-label="send_button">Confirm</button>
                     </div>
             </div>
         </form>
