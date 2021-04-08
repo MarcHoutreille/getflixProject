@@ -33,7 +33,7 @@
                         while ($data = $response->fetch()) {
                             echo '  
                                     <div data-id=' . $data['id'] . ' class="card col-sm-2 p-3">
-                                        <div class="form-check">
+                                        <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="avatar_' . $data['id'] . '" id=' . $data['id'] . ' value="avatar_1">
                                             <label class="form-check-label" for="avatar_' . $data['id'] . '">Avatar ' . $data['id'] . '</label>
                                         </div>
@@ -41,9 +41,25 @@
                                     </div>';
                         }
                     ?>
+                    <div class="col-sm-2 p-3">
+                        <label class="form-check-label" for="">Your choice is: <?php  ?></label><button type="submit" name="loadAvatar" class="btn btn-outline-secondary" aria-label="send_button">validate</button>
+                    </div>
             </div>
         </form>
         
+
+
+        <!-- Envoi du form vers db -->
+
+        <?php
+
+            
+
+        ?>
+
+
+
+
         <?php include('phone_navbar.php');?>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
