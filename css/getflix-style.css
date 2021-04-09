@@ -128,9 +128,7 @@ input#remember-me
 	overflow: hidden;
 }
 
-.video-container iframe,  
-.video-container object,  
-.video-container embed {
+.video-container iframe {
 	position: absolute;
 	top: 0;
 	left: 0;
