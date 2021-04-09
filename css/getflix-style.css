@@ -139,8 +139,8 @@ input#remember-me
 }
 
 iframe {
-    width: 100vw;
-    height: calc(100vw/1.77);
+    width: 100%;
+    height: calc(100/1.77);
 }
 
 /*-----------------------------FOOTER----------------------------*/
