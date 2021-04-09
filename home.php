@@ -22,7 +22,7 @@ if (empty($_SESSION['username'])) {
 <body>
 
     
-
+<?php include('pc_navbar.php'); ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-">
@@ -31,7 +31,7 @@ if (empty($_SESSION['username'])) {
         </div>
         <div class="row">
             <div class="col-">
-                <?php include('pc_navbar.php'); ?>
+                
             </div>
         </div>
         <!--
