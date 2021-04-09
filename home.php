@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+include("connexion_db.php");
+if (empty($_SESSION['username'])) {
+    echo "bye";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +21,7 @@
 
 <body>
 
-    <?php include("connexion_db.php"); ?>
+    
 
     <div class="container-fluid">
         <div class="row">
