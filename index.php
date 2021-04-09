@@ -1,3 +1,8 @@
+<?php 
+session_start();
+include("connexion_db_perso.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +39,7 @@
         </div>
     </main>
 
-
+    <?php include("phone_navbar.php"); ?>
     <?php include("footer.php"); ?>
 
 </body>
