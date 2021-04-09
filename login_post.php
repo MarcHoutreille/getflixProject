@@ -1,6 +1,7 @@
 <?php 
-
-include("connexion_db.php");
+session_start();
+// include("connexion_db.php");
+include("connexion_db_perso.php");
 
     
 
@@ -8,7 +9,7 @@ include("connexion_db.php");
     {
         $username = strtolower($_POST['username']);
         $password = $_POST['password'];
-        $req = $db->prepare('SELECT id, password FROM users WHERE username = :username');
+        $req = $db->prepare('SELECT * FROM users WHERE username = :username');
         $req->execute(array('username' => $username));
         $resultat = $req->fetch();
         // Comparaison du pass envoyé via le formulaire avec la base
@@ -18,7 +19,7 @@ include("connexion_db.php");
             echo "<div style='padding-top:17%' class='text-center'>";
             echo "ok";
             echo "</div>";
-            session_start();
+            
 
             $_SESSION['user_id'] = $resultat['id'];
             $_SESSION["username"] = $resultat['username'];
@@ -31,7 +32,7 @@ include("connexion_db.php");
             // echo $_SESSION["id_avatar"];
 
 
-            header("Location: home.php");
+            header("Location: user_account.php");
         } else 
         {
             echo "not ok";
