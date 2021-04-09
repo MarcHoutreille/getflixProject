@@ -1,16 +1,31 @@
 # TO DO LIST 
-## mercredi 07/04
-- [x] Tester accordéon
-- [x] Comprendre et faire la requete de changement de mot de passe
 
-## jeudi 08/04
-- [ ] Tester la requete de changement de mot de passe
-- [ ] Mettre les résultats de la recherche dans des cards 
-- [x] Trouver un moyen de stocker l'id de l'avatar dans le $_Session
-- [ ] Remettre dans navbar pc l'affichage de l'avatar de la personne connectée
+## WEEK END
+### GENERAL
+- [ ] Fixer le footer en bas de page et l'intégrer dans toutes mes pages
+  - [ ] index.php
+  - [ ] user_account.php
+  - [ ] search.php
+- [ ] ~~Faire une page d'accueil pour saluer le nouveau compte créé (un modal ?)~~
+### USER ACCOUNT
+- [ ] Puller le user account de Thomas pour le comparer avec le mien et y mettre les includes
+- [ ] Voir pour le changement d'avatar (polish)
+### NAVBAR
+- [ ] Puller les navbar de Thomas
+- [ ] Placer en bas la navbar téléphone
+- [ ] Changer les couleurs des elements bleus de la navbar pour les accorder à la "charte graphique" du site
 
-## vendredi 09/04
-- [ ] Remettre l'affichage de l'avatar dans la nav bar
-## indéfini, parce qu'on s'en rend compte maintenant
-- [ ] Fixer la navbar téléphone
-- [ ] Faire une page d'accueil pour saluer le nouveau compte créé (un modal ?)
+### SEARCH BAR
+- [ ] Afficher les resultats de façon plus sexy (card group) (sur la page search_get ?)
+
+### ADVANCED SEARCH
+- [ ] Afficher les genres dans les select de mon menu
+- [ ] Afficher les langes dans les select de mon menu
+- [ ] Faire les requetes sql
+- [ ] Afficher les résultats de façon plus sexy (cf search bar)
+- [ ] 
+  
+### ENGLISH OF THE FAMILIES
+- [ ] Essayer de traduire en anglais ce que je peux 
+
+
