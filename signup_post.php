@@ -1,9 +1,7 @@
 <?php
-try {
-    $db = new PDO('mysql:host=localhost;dbname=getflix_project', 'root', 'YbZbgfEnjB*aMK4Q', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-} catch (Exception $e) /* error handling */ {
-    die('Erreur');
-}
+
+include('connexion_db.php');
+
 /* check si l'utilisateur a bien rentré ses infos */
 if (empty($_POST['username']) | empty($_POST['email']) | empty($_POST['password'])) {
     echo $_POST['username'];

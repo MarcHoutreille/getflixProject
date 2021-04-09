@@ -120,7 +120,7 @@ footer {
     background-color: #343a40;
     color: white;
     padding: 20px 10px 10px 10px;
-    position:relative;
+    position:absolute;
     bottom: 0;
     left: 0;    
 }
@@ -142,21 +142,19 @@ footer a:hover {
 }
 
 /* ------Adaptation footer improvisée ------------------*/
-@media (max-width:900px)
+/* @media (max-width:900px)
 {
     footer
     {
-        position: fixed;
+        position: absolute;
         bottom:0;
-        left:0;
-        right:0;
-        width: 100vw;
+        width: 100%;
         
     }
-    main
+     main
     {
         padding-bottom: 150px;
-    }
+    } 
 }
 
 @media (max-width:230px)
@@ -165,4 +163,4 @@ footer a:hover {
     {
         padding-bottom: 250px;
     }
-}
+} */

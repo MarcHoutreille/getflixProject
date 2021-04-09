@@ -65,6 +65,11 @@
 </head>
 
 <body>
+<div class="row">
+            <div class="col-">
+                <img src="img/getflix-logo.png" alt="getflix-logo" id="phoneLogo">
+            </div>
+        </div>
     <?php include('pc_navbar.php'); ?>
     <h1 class="text-center my-5">Hello, <?php echo $_SESSION["username"]; ?> ! Do you want to edit profile ?</h1>
     <div class="container mb-5">
@@ -128,7 +133,11 @@
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <strong>Warning :</strong> Once you have clicked the button there's no tunrning back!
+                        <form method="post" action="delete.php">
+                        <input type="hidden" value="<?php echo $_SESSION['id'] ?>" />
+                        <input type="submit" name="Delete account" value="Delete" />
+                        </form>
                     </div>
                 </div>
             </div>

@@ -2,19 +2,11 @@
 
 session_start();
 
-include('connexion-db.php');
+include('connexion_db.php');
 
-$id = $_SESSION['id'];
+$id = $_SESSION['userid'];
 
-try{
-
-$sql = "DELETE FROM users WHERE id=$id";
-
-  $pdo->exec($sql);
-  echo "Account deleted successfully";
-} catch(PDOException $e) {
-  echo $sql . "<br>" . $e->getMessage();
-}
+$pdo = $db -> exec("DELETE FROM users WHERE id = $id");
 
 header('Location: index.php');
 ?>
