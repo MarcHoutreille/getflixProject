@@ -39,7 +39,8 @@ a:active
 } */
 
 /*-----------------------------NAVBAR----------------------------*/
-#phoneLogo{
+#phoneLogo
+{
     width:30%;
     display: block;
     margin-left: auto;
@@ -88,6 +89,12 @@ a:active
         margin-top: 100px;
     } */
 }
+
+#phoneNavbar
+{
+    position: relative;
+    
+}
 /*-----------------------------FORM LOGIN----------------------------*/
 input#remember-me
 {
@@ -117,10 +124,8 @@ footer {
     background-color: #343a40;
     color: white;
     padding: 20px 10px 10px 10px;
-    /* position: absolute;
-    bottom: 0;
-    width:100vw; */
-
+    position: sticky;
+    bottom: 0px;
 }
 
 footer a {
@@ -139,20 +144,13 @@ footer a:hover {
     text-decoration:underline;
 }
 
-/* ------Adaptation footer improvisée ------------------*/
-@media (max-width:900px)
-{
+/* ------Adaptation footer improvisée */
 
-    main
-    {
-        padding-bottom: 150px;
-    }
-}
-
-@media (max-width:230px)
+@media (min-width: 768px) 
 {
-    main
+    footer
     {
-        padding-bottom: 250px;
+        position: absolute;
+        width: 100vw;
     }
 }

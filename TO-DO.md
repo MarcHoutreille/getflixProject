@@ -1,15 +1,17 @@
 # TO DO LIST 
 
 ## WEEK END
+
 ### GENERAL
 - [ ] Fixer le footer en bas de page et l'intégrer dans toutes mes pages
-  - [ ] index.php
+  - [x] index.php
   - [ ] user_account.php
   - [ ] search.php
-- [ ] ~~Faire une page d'accueil pour saluer le nouveau compte créé (un modal ?)~~
+
 ### USER ACCOUNT
 - [ ] Puller le user account de Thomas pour le comparer avec le mien et y mettre les includes
 - [ ] Voir pour le changement d'avatar (polish)
+
 ### NAVBAR
 - [ ] Puller les navbar de Thomas
 - [ ] Placer en bas la navbar téléphone
@@ -24,7 +26,10 @@
 - [ ] Faire les requetes sql
 - [ ] Afficher les résultats de façon plus sexy (cf search bar)
 - [ ] Idée : remplir a l'avance les select, faire des display none via le js ? 
-  
+
+### SIGNUP PAGE SUCCESSFULL
+- [ ] Rendre cette page plus sexy
+
 ### ENGLISH OF THE FAMILIES
 - [ ] Essayer de traduire en anglais ce que je peux 
 

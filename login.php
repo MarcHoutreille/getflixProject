@@ -8,7 +8,7 @@
                         <span class="input-group-text" id="login-password"><i class="fas fa-lock"></i></span>
                         <input type="password" class="form-control" placeholder="Password" id="login-password" aria-label="Password" aria-describedby="Password" name="password">
                     </div>
-                    <div class="form-check mb-3">
+                    <div class="form-check mb-3 text-end">
                         <input class="form-check-input" type="checkbox" value="" id="remember-me" name="remember-me">
                         <label class="form-check-label" for="remember-me">
                             Remember me ?
