@@ -1,9 +1,7 @@
 <?php 
 session_start();
-// include("connexion_db.php");
-include("connexion_db_perso.php");
-
-    
+include("connexion_db.php");
+   
 
     if (((isset($_POST['username'])) & (isset($_POST['password']))) & !empty($_POST['username']) & !empty($_POST['password']))
     {
@@ -21,7 +19,7 @@ include("connexion_db_perso.php");
             echo "</div>";
             
 
-            $_SESSION['user_id'] = $resultat['id'];
+            $_SESSION['id'] = $resultat['id'];
             $_SESSION["username"] = $resultat['username'];
             $_SESSION["email"] = $resultat['email'];
             $_SESSION["password_hash"] = $resultat['password'];

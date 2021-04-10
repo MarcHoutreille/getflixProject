@@ -1,7 +1,6 @@
 <?php
 session_start();
-// include("connexion_db.php");
-include("connexion_db_perso.php");
+include("connexion_db.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,12 +18,12 @@ include("connexion_db_perso.php");
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    Edit password    
+                        Edit password
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                    <?php include("change_password.php");?>    
+                        <?php include("change_password.php"); ?>
                     </div>
                 </div>
             </div>
@@ -36,7 +35,7 @@ include("connexion_db_perso.php");
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <div class="text-center text-warning">WIP</div>
                     </div>
                 </div>
             </div>
@@ -48,7 +47,11 @@ include("connexion_db_perso.php");
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <div class="text-danger"><strong>Warning :</strong> Once you have clicked the button there's no tunrning back!</div>
+                        <form method="post" action="delete.php">
+                            <input type="hidden" value="<?php echo $_SESSION['id'] ?>" />
+                            <input type="submit" name="Delete account" value="Delete" />
+                        </form>
                     </div>
                 </div>
             </div>
@@ -56,7 +59,7 @@ include("connexion_db_perso.php");
     </div>
 
     <?php include('phone_navbar.php'); ?>
-    <?php include('footer.php')?>
+    <?php include('footer.php') ?>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
