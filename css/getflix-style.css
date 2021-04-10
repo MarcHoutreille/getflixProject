@@ -18,7 +18,8 @@ body
     background-image: url("../images/bg-bandes-films.png");
     background-size: 100%;
     background-repeat: repeat-y;
-    min-height: 100vh;
+    height: 100vh;
+    position: relative;
 }
 
 .row
@@ -27,10 +28,6 @@ body
     margin-right: 0 !important;
 }
 
-/* .container-fluid {
-    margin: 0;
-    padding: 0;
-} */
 
 /* a:link,
 a:visited,
@@ -120,8 +117,9 @@ footer {
     background-color: #343a40;
     color: white;
     padding: 20px 10px 10px 10px;
-    position:relative;
+    /* position: absolute;
     bottom: 0;
+    width:100vw; */
 
 }
 
@@ -144,15 +142,7 @@ footer a:hover {
 /* ------Adaptation footer improvisée ------------------*/
 @media (max-width:900px)
 {
-    footer
-    {
-        position: fixed;
-        bottom:0;
-        left:0;
-        right:0;
-        width: 100vw;
-        
-    }
+
     main
     {
         padding-bottom: 150px;

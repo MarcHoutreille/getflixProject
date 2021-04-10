@@ -23,7 +23,7 @@
 - [ ] Afficher les langes dans les select de mon menu
 - [ ] Faire les requetes sql
 - [ ] Afficher les résultats de façon plus sexy (cf search bar)
-- [ ] 
+- [ ] Idée : remplir a l'avance les select, faire des display none via le js ? 
   
 ### ENGLISH OF THE FAMILIES
 - [ ] Essayer de traduire en anglais ce que je peux 

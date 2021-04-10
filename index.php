@@ -2,7 +2,6 @@
 session_start();
 include("connexion_db_perso.php");
 // include("connexion_db.php");
-
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +15,7 @@ include("connexion_db_perso.php");
 <body>
     <header class="row">
         <div class="col-md-12 text-center my-5">
-            <h1>Discover the unlimited collection of movies with <strong>GETFLIX</strong>... <br>Watch it everywhere!
+            <h1>Discover the unlimited collection of movies with <strong>GETFLIX</strong>... <br>Watch it everywhere! <i class="fas fa-smile-wink"></i>
             </h1>
         </div>
         <div class="col-md-12 text-center">
