@@ -1,7 +1,6 @@
 <?php 
 session_start();
-include("connexion_db_perso.php");
-// include("connexion_db.php");
+include("connexion_db.php");
 ?>
 
 <!DOCTYPE html>
