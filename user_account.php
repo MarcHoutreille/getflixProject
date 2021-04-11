@@ -13,7 +13,7 @@ include("connexion_db.php");
 <body>
     <?php include('pc_navbar.php'); ?>
     <h1 class="text-center my-5">Hello, <?php echo $_SESSION["username"]; ?> ! Do you want to edit profile ?</h1>
-    <div class="container mb-5">
+    <main class="container mb-5">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
@@ -46,17 +46,19 @@ include("connexion_db.php");
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
+                    <div class="accordion-body justify-content-end">
                         <div class="text-danger"><strong>Warning :</strong> Once you have clicked the button there's no tunrning back!</div>
                         <form method="post" action="delete.php">
                             <input type="hidden" value="<?php echo $_SESSION['id'] ?>" />
-                            <input type="submit" name="Delete account" value="Delete" />
+                            <div class="d-md-flex justify-content-end">
+                                <input type="submit" class="btn btn-danger" name="Delete account" value="Delete" />
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+</main>
 
     <?php include('phone_navbar.php'); ?>
     <?php include('footer.php') ?>

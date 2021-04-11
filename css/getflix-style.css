@@ -20,9 +20,8 @@ body
     background-repeat: repeat-y;
     min-height: 100vh;
     position: relative;
-    display:flex;
-    flex-direction:column;
-    /* align-content: space-between; */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 .row
@@ -32,6 +31,16 @@ body
 }
 
 
+.btn-danger
+{
+    background-color : #dc3545;
+    color:#ffffff;
+}
+
+.text-danger
+{
+    color:#dc3545;
+}
 /* a:link,
 a:visited,
 a:hover,
@@ -99,6 +108,16 @@ a:active
     width: 100%;
     
 }
+
+nav a i
+{
+    color: #da4167;
+}
+
+.user-options i:first-child
+{
+    margin-right: 10px;
+}
 /*-----------------------------FORM LOGIN----------------------------*/
 input#remember-me
 {
@@ -122,16 +141,37 @@ input#remember-me
     opacity: 1.0;
     padding: 2px 5px;
 }
+
+/*-----------------------------ADVANCCED SEARCH----------------------------*/
+#search_by_dates
+{
+    grid-template-columns: repeat(4,auto);
+    gap:2px;
+    align-items: center;
+
+}
+#search_by_dates label
+{
+    text-align:center;
+    
+}
+
+@media (max-width: 576px) 
+{
+    #search_by_dates
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,auto);
+    }
+}    
 /*-----------------------------FOOTER----------------------------*/
 
 footer {
     background-color: #343a40;
     color: white;
     padding: 20px 10px 10px 10px;
-    /* position: sticky;
-    bottom: 0px; */
-    align-self: flex-end;
-    width: 100%;
+    /* width:100vw; */
+    align-self: end;
 }
 
 footer a {
@@ -152,11 +192,11 @@ footer a:hover {
 
 /* ------Adaptation footer improvisée */
 
-@media (min-width: 768px) 
+/* @media (min-width: 768px) 
 {
     footer
     {
         position: absolute;
         width: 100vw;
     }
-}
+} */

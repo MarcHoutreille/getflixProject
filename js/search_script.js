@@ -29,7 +29,7 @@ function displayOnlyNameSearch()
 function replaceInputs(value) 
 {
     
-    alert(value);
+    // alert(value);
     switch (value) 
    
     {
@@ -46,6 +46,7 @@ function replaceInputs(value)
             
             //Afficher la recherche par nom
             searchByName = document.getElementById("input_search_by_name")
+            searchByName.style.display ="block";
             searchByName.placeholder="Type the name of the moovie you are looking for...";
 
             break;
