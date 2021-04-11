@@ -9,23 +9,24 @@
   - [ ] search.php
 
 ### USER ACCOUNT
-- [ ] Puller le user account de Thomas pour le comparer avec le mien et y mettre les includes
+- [x] Puller le user account de Thomas pour le comparer avec le mien et y mettre les includes
 - [ ] Voir pour le changement d'avatar (polish)
 
 ### NAVBAR
-- [ ] Puller les navbar de Thomas
+- [x] Puller les navbar de Thomas
 - [ ] Placer en bas la navbar téléphone
 - [ ] Changer les couleurs des elements bleus de la navbar pour les accorder à la "charte graphique" du site
 
 ### SEARCH BAR
-- [ ] Afficher les resultats de façon plus sexy (card group) (sur la page search_get ?)
+- [x] Afficher les resultats de façon plus sexy (card group) (sur la page search_get ?)
+- [ ] TRADUIRE LES RESUMES ET LES CATEGORIES
 
 ### ADVANCED SEARCH
-- [ ] Afficher les genres dans les select de mon menu
-- [ ] Afficher les langes dans les select de mon menu
-- [ ] Faire les requetes sql
+- [x] Afficher les genres dans les select de mon menu
+- [x] Afficher les langes dans les select de mon menu
+- [ ] Faire les requetes sql de recherches
 - [ ] Afficher les résultats de façon plus sexy (cf search bar)
-- [ ] Idée : remplir a l'avance les select, faire des display none via le js ? 
+- [x] Idée : remplir a l'avance les select, faire des display none via le js ? 
 
 ### SIGNUP PAGE SUCCESSFULL
 - [ ] Rendre cette page plus sexy
