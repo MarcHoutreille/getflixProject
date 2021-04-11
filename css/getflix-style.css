@@ -18,8 +18,11 @@ body
     background-image: url("../images/bg-bandes-films.png");
     background-size: 100%;
     background-repeat: repeat-y;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
+    display:flex;
+    flex-direction:column;
+    /* align-content: space-between; */
 }
 
 .row
@@ -92,7 +95,8 @@ a:active
 
 #phoneNavbar
 {
-    position: relative;
+    align-self: flex-end;
+    width: 100%;
     
 }
 /*-----------------------------FORM LOGIN----------------------------*/
@@ -124,8 +128,10 @@ footer {
     background-color: #343a40;
     color: white;
     padding: 20px 10px 10px 10px;
-    position: sticky;
-    bottom: 0px;
+    /* position: sticky;
+    bottom: 0px; */
+    align-self: flex-end;
+    width: 100%;
 }
 
 footer a {
