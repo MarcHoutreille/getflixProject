@@ -1,21 +1,16 @@
 <?php
-
 session_start();
-include("connexion_db.php");
-if (empty($_SESSION['username'])) {
-    echo "bye";
-}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <?php include("head.php");?>
     <title>Home</title>
 </head>
-
 <body>
+   <?php include("connexion_db.php"); ?>
+    <?php include('pc_navbar.php'); ?>
 
     
 <?php include('pc_navbar.php'); ?>
@@ -92,7 +87,8 @@ if (empty($_SESSION['username'])) {
                 }
             ?>
         </div>
-        <div class="row my-3">
+    </div>
+    <div class="row my-3">
 
         <div class="row my-3">
 
@@ -176,15 +172,11 @@ if (empty($_SESSION['username'])) {
                                     <h5 class="card-title text-white">' . $data['title'] . '</h5>
                                     <p class="card-text text-white">' . $data['shortened_synopsis'] . '(...)</p>
                                     <p class="card-text text-white">' . $data['duration'] . ' min</p>
-                                </div>
-                            </div>';
-                }
-            ?>
-        </div>
-        
-        <?php include('phone_navbar.php');?>
-
+                                </div></div>';
+        }
+        ?>
     </div>
+    <?php include('phone_navbar.php'); ?>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">

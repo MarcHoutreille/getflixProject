@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +40,7 @@
         </div>
         <div class="row">
             <div class="col- text-center">
-            <a class="btn btn-dark edit" id="btn3" href="#" role="button"><h3> Delete profile </h3></a>
+            <a class="btn btn-dark edit" id="delete_btn" href="delete.php" role="button"><h3> Delete profile </h3></a>
             </div>
         </div>
         <?php include('phone_navbar.php'); ?>

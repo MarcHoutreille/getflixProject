@@ -1,6 +1,5 @@
 <?php 
 session_start();
-
 include("connexion_db.php");
    
 
@@ -19,6 +18,7 @@ include("connexion_db.php");
 
             $_SESSION['id'] = $resultat['id'];
             $_SESSION["username"] = $resultat['username'];
+            $_SESSION["userid"] = $resultat['id'];
             $_SESSION["email"] = $resultat['email'];
             $_SESSION["password_hash"] = $resultat['password'];
             $_SESSION["id_avatar"] = $resultat['id_avatar'];

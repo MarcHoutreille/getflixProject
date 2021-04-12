@@ -11,6 +11,11 @@ include("connexion_db.php");
 </head>
 
 <body>
+<div class="row">
+            <div class="col-">
+                <img src="img/getflix-logo.png" alt="getflix-logo" id="phoneLogo">
+            </div>
+        </div>
     <?php include('pc_navbar.php'); ?>
     <h1 class="text-center my-5">Hello, <?php echo $_SESSION["username"]; ?> ! Do you want to edit profile ?</h1>
     <main class="container mb-5">
