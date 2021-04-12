@@ -12,8 +12,8 @@ include("connexion_db.php");
 
 <body>
     <?php include('pc_navbar.php'); ?>
-    <h1 class="text-center my-5">Hello, <?php echo $_SESSION["username"]; ?> ! Do you want to edit profile ?</h1>
     <main class="container mb-5">
+        <h1 class="text-center my-5">Hello, <?php echo $_SESSION["username"]; ?> ! Do you want to edit profile ?</h1>
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
@@ -58,7 +58,7 @@ include("connexion_db.php");
                 </div>
             </div>
         </div>
-</main>
+    </main>
 
     <?php include('phone_navbar.php'); ?>
     <?php include('footer.php') ?>
