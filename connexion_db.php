@@ -7,7 +7,7 @@
             dbname=getflix_project;
             charset=utf8",
             "root",
-            ""
+            "YbZbgfEnjB*aMK4Q"
         );
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
