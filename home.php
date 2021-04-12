@@ -38,68 +38,8 @@ session_start();
                 $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies WHERE category = 'Gangsters' ORDER BY category DESC LIMIT 4");
                 while ($data = $response->fetch()) {
                     echo '  
-                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-2 m-1 px-0">
-                                <img src=' . $data['thumbnail'] . ' class="card-img" alt=' . $data['title'] . ' >
-                                <div class="card-img-overlay viewTxt">
-                                    <h5 class="card-title text-white">' . $data['title'] . '</h5>
-                                    <p class="card-text text-white">' . $data['shortened_synopsis'] . '(...)</p>
-                                    <p class="card-text text-white">' . $data['duration'] . ' min</p>
-                                </div>
-                            </div>
-                        </a>';
-                }
-            ?>
-
-        </div>
-        <div class="row my-3">
-                
-            <h3> Les immanquables</h3>
-            <?php
-                $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies WHERE category = 'Science-fiction' ORDER BY category DESC LIMIT 4");
-                while ($data = $response->fetch()) {
-                    echo '  
-                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-2 m-1 px-0">
-                                <img src=' . $data['thumbnail'] . ' class="card-img" alt=' . $data['title'] . ' >
-                                <div class="card-img-overlay viewTxt">
-                                    <h5 class="card-title text-white">' . $data['title'] . '</h5>
-                                    <p class="card-text text-white">' . $data['shortened_synopsis'] . '(...)</p>
-                                    <p class="card-text text-white">' . $data['duration'] . ' min</p>
-                                </div>
-                            </div>';
-                }
-            ?>
-        </div>
-        <div class="row my-3">
-        
-            <h3> Reprendre la lecture</h3>
-            <?php
-                $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies WHERE category = 'Drame' ORDER BY category DESC LIMIT 4");
-                while ($data = $response->fetch()) {
-                    echo '  
-                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-2 m-1 px-0">
-                                <img src=' . $data['thumbnail'] . ' class="card-img" alt=' . $data['title'] . ' >
-                                <div class="card-img-overlay viewTxt">
-                                    <h5 class="card-title text-white">' . $data['title'] . '</h5>
-                                    <p class="card-text text-white">' . $data['shortened_synopsis'] . '(...)</p>
-                                    <p class="card-text text-white">' . $data['duration'] . ' min</p>
-                                </div>
-                            </div>';
-                }
-            ?>
-        </div>
-    </div>
-    <div class="row my-3">
-
-        <div class="row my-3">
-
-            <h3>Les nouveautés</h3>
-            <?php
-                $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies WHERE category = 'Gangsters' ORDER BY category DESC LIMIT 4");
-                while ($data = $response->fetch()) {
-                    echo '  
-
-                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-2 m-1 px-0">
-
+                        <a href="movie.php?id=' . $data['id'] . '" class="p-0 m-0 col-md-3 col-12">
+                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col- px-0">
                                 <img src=' . $data['thumbnail'] . ' class="card-img" alt=' . $data['title'] . ' >
                                 <div class="card-img-overlay viewTxt">
                                     <h5 class="card-title text-white">' . $data['title'] . '</h5>
@@ -122,9 +62,8 @@ session_start();
                 $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies WHERE category = 'Science-fiction' ORDER BY category DESC LIMIT 4");
                 while ($data = $response->fetch()) {
                     echo '  
-
-                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-2 m-1 px-0">
-
+                        <a href="movie.php?id=' . $data['id'] . '" class="p-0 m-0 col-md-3 col-12">
+                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col- px-0">
                                 <img src=' . $data['thumbnail'] . ' class="card-img" alt=' . $data['title'] . ' >
                                 <div class="card-img-overlay viewTxt">
                                     <h5 class="card-title text-white">' . $data['title'] . '</h5>
@@ -143,9 +82,8 @@ session_start();
                 $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies WHERE category = 'Drame' ORDER BY category DESC LIMIT 4");
                 while ($data = $response->fetch()) {
                     echo '  
-
-                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-2 m-1 px-0">
-
+                        <a href="movie.php?id=' . $data['id'] . '" class="p-0 m-0 col-md-3 col-12">
+                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col- px-0">
                                 <img src=' . $data['thumbnail'] . ' class="card-img" alt=' . $data['title'] . ' >
                                 <div class="card-img-overlay viewTxt">
                                     <h5 class="card-title text-white">' . $data['title'] . '</h5>
@@ -164,19 +102,23 @@ session_start();
                 $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies WHERE category = 'Fantasy' ORDER BY category DESC LIMIT 4");
                 while ($data = $response->fetch()) {
                     echo '  
-
-                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-2 m-1 px-0">
-
+                        <a href="movie.php?id=' . $data['id'] . '" class="p-0 m-0 col-md-3 col-12">
+                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col- px-0">
                                 <img src=' . $data['thumbnail'] . ' class="card-img" alt=' . $data['title'] . ' >
                                 <div class="card-img-overlay viewTxt">
                                     <h5 class="card-title text-white">' . $data['title'] . '</h5>
                                     <p class="card-text text-white">' . $data['shortened_synopsis'] . '(...)</p>
                                     <p class="card-text text-white">' . $data['duration'] . ' min</p>
-                                </div></div>';
-        }
-        ?>
+                                </div>
+                            </div>
+                        </a>';
+                }
+            ?>
+        </div>
+        
+        <?php include('phone_navbar.php');?>
+
     </div>
-    <?php include('phone_navbar.php'); ?>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
