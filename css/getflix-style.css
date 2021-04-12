@@ -114,6 +114,33 @@ input#remember-me
     opacity: 1.0;
     padding: 2px 5px;
 }
+
+/*-----------------------------MOVIE----------------------------------*/
+
+.link-inline {
+    display:inline;
+}
+
+.video-container {
+	position: relative;
+	padding: 30px 20px 56.25% 20px;
+	/*height: 0;*/
+	overflow: hidden;
+}
+
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+}
+
+iframe {
+    width: 100%;
+    height: calc(100/1.77);
+}
+
 /*-----------------------------FOOTER----------------------------*/
 
 footer {
