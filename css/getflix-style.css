@@ -24,6 +24,16 @@ body
     grid-template-rows: auto 1fr auto;
 }
 
+.comments{
+    background-color: #343a40;
+    color: white;
+    border-radius: 3px;
+    max-width: 50%;
+
+    height: 30px;
+
+}
+
 .row
 {
     margin-left: 0 !important;
