@@ -1,8 +1,7 @@
 <?php 
 session_start();
 include("connexion_db.php");
-
-    
+   
 
     if (((isset($_POST['username'])) & (isset($_POST['password']))) & !empty($_POST['username']) & !empty($_POST['password']))
     {
@@ -15,26 +14,24 @@ include("connexion_db.php");
         $isPasswordCorrect = password_verify($_POST['password'], $resultat['password']);
 
         if ($isPasswordCorrect) {
-            echo "<div style='padding-top:17%' class='text-center'>";
-            echo "ok";
-            echo "</div>";
-        
+            
 
+            $_SESSION['id'] = $resultat['id'];
             $_SESSION["username"] = $resultat['username'];
             $_SESSION["userid"] = $resultat['id'];
             $_SESSION["email"] = $resultat['email'];
             $_SESSION["password_hash"] = $resultat['password'];
             $_SESSION["id_avatar"] = $resultat['id_avatar'];
-            
+            setcookie('username', $resultat['username'], time() + 365 * 24 * 3600, null, null, false, true);
             // echo $_SESSION["username"];
             // echo $_SESSION["email"];
             // echo $_SESSION["id_avatar"];
 
 
-            header("Location: home.php");
+            header("Location: user_account.php");
         } else 
         {
-            echo "not ok";
+            header("Location: index.php");
         }
 
         /*if ($check_connexion == 1) 

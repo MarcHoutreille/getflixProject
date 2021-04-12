@@ -8,4 +8,4 @@ header('Location: index.php');
 
 echo 'hello'.$_SESSION['username'];
 
-?>
+?> 
