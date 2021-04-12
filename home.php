@@ -63,13 +63,16 @@
                 $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies WHERE category = 'Gangsters' ORDER BY category DESC LIMIT 4");
                 while ($data = $response->fetch()) {
                     echo '  
-                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-3 px-0">
+                        <a href="movie.php?id=' . $data['id'] . '" class="p-0 m-0 col-md-3 col-12">
+                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col- px-0">
                                 <img src=' . $data['thumbnail'] . ' class="card-img" alt=' . $data['title'] . ' >
                                 <div class="card-img-overlay viewTxt">
                                     <h5 class="card-title text-white">' . $data['title'] . '</h5>
                                     <p class="card-text text-white">' . $data['shortened_synopsis'] . '(...)</p>
                                     <p class="card-text text-white">' . $data['duration'] . ' min</p>
-                                </div></div>';
+                                </div>
+                            </div>
+                        </a>';
                 }
 
             ?>
@@ -84,13 +87,16 @@
                 $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies WHERE category = 'Science-fiction' ORDER BY category DESC LIMIT 4");
                 while ($data = $response->fetch()) {
                     echo '  
-                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-3 px-0">
+                        <a href="movie.php?id=' . $data['id'] . '" class="p-0 m-0 col-md-3 col-12">
+                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col- px-0">
                                 <img src=' . $data['thumbnail'] . ' class="card-img" alt=' . $data['title'] . ' >
                                 <div class="card-img-overlay viewTxt">
                                     <h5 class="card-title text-white">' . $data['title'] . '</h5>
                                     <p class="card-text text-white">' . $data['shortened_synopsis'] . '(...)</p>
                                     <p class="card-text text-white">' . $data['duration'] . ' min</p>
-                                </div></div>';
+                                </div>
+                            </div>
+                        </a>';
                 }
             ?>
         </div>
@@ -101,13 +107,16 @@
                 $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies WHERE category = 'Drame' ORDER BY category DESC LIMIT 4");
                 while ($data = $response->fetch()) {
                     echo '  
-                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-3 px-0">
+                        <a href="movie.php?id=' . $data['id'] . '" class="p-0 m-0 col-md-3 col-12">
+                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col- px-0">
                                 <img src=' . $data['thumbnail'] . ' class="card-img" alt=' . $data['title'] . ' >
                                 <div class="card-img-overlay viewTxt">
                                     <h5 class="card-title text-white">' . $data['title'] . '</h5>
                                     <p class="card-text text-white">' . $data['shortened_synopsis'] . '(...)</p>
                                     <p class="card-text text-white">' . $data['duration'] . ' min</p>
-                                </div></div>';
+                                </div>
+                            </div>
+                        </a>';
                 }
             ?>
         </div>
@@ -118,13 +127,16 @@
                 $response = $db->query("SELECT id, title, year, category, thumbnail, SUBSTRING(synopsis,1,300) AS shortened_synopsis , duration, url, language FROM movies WHERE category = 'Fantasy' ORDER BY category DESC LIMIT 4");
                 while ($data = $response->fetch()) {
                     echo '  
-                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col-sm-3 px-0">
+                        <a href="movie.php?id=' . $data['id'] . '" class="p-0 m-0 col-md-3 col-12">
+                            <div data-id=' . $data['id'] . ' class="card bg-dark text-black movie col- px-0">
                                 <img src=' . $data['thumbnail'] . ' class="card-img" alt=' . $data['title'] . ' >
                                 <div class="card-img-overlay viewTxt">
                                     <h5 class="card-title text-white">' . $data['title'] . '</h5>
                                     <p class="card-text text-white">' . $data['shortened_synopsis'] . '(...)</p>
                                     <p class="card-text text-white">' . $data['duration'] . ' min</p>
-                                </div></div>';
+                                </div>
+                            </div>
+                        </a>';
                 }
             ?>
         </div>
