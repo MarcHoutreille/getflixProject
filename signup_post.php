@@ -1,7 +1,5 @@
 <?php
-
-include('connexion_db.php');
-
+include("connexion_db.php");
 /* check si l'utilisateur a bien rentré ses infos */
 if (empty($_POST['username']) | empty($_POST['email']) | empty($_POST['password'])) {
     echo $_POST['username'];

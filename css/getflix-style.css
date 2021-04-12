@@ -19,6 +19,9 @@ body
     background-size: 100%;
     background-repeat: repeat-y;
     min-height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 .row
@@ -27,11 +30,17 @@ body
     margin-right: 0 !important;
 }
 
-/* .container-fluid {
-    margin: 0;
-    padding: 0;
-} */
 
+.btn-danger
+{
+    background-color : #dc3545;
+    color:#ffffff;
+}
+
+.text-danger
+{
+    color:#dc3545;
+}
 /* a:link,
 a:visited,
 a:hover,
@@ -42,7 +51,8 @@ a:active
 } */
 
 /*-----------------------------NAVBAR----------------------------*/
-#phoneLogo{
+#phoneLogo
+{
     width:30%;
     display: block;
     margin-left: auto;
@@ -91,6 +101,23 @@ a:active
         margin-top: 100px;
     } */
 }
+
+#phoneNavbar
+{
+    align-self: flex-end;
+    width: 100%;
+    
+}
+
+nav a i
+{
+    color: #da4167;
+}
+
+.user-options i:first-child
+{
+    margin-right: 10px;
+}
 /*-----------------------------FORM LOGIN----------------------------*/
 input#remember-me
 {
@@ -110,19 +137,67 @@ input#remember-me
     opacity: 1.0;
 }
 .viewTxt h5 {
-    background-color:black;
+   /* background-color:black; */
     opacity: 1.0;
     padding: 2px 5px;
 }
+
+/*-----------------------------MOVIE----------------------------------*/
+
+.link-inline {
+    display:inline;
+}
+
+.video-container {
+	position: relative;
+	padding: 30px 20px 56.25% 20px;
+	/*height: 0;*/
+	overflow: hidden;
+}
+
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+}
+
+iframe {
+    width: 100%;
+    height: calc(100/1.77);
+}
+
+/*-----------------------------ADVANCCED SEARCH----------------------------*/
+#search_by_dates
+{
+    grid-template-columns: repeat(4,auto);
+    gap:2px;
+    align-items: center;
+
+}
+#search_by_dates label
+{
+    text-align:center;
+    
+}
+
+@media (max-width: 576px) 
+{
+    #search_by_dates
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,auto);
+    }
+}    
 /*-----------------------------FOOTER----------------------------*/
 
 footer {
     background-color: #343a40;
     color: white;
     padding: 20px 10px 10px 10px;
-    position:absolute;
-    bottom: 0;
-    left: 0;    
+    /* width:100vw; */
+    align-self: end;
 }
 
 footer a {
@@ -140,27 +215,3 @@ footer a:link, footer a:visited, footer a:hover, footer a:active
 footer a:hover {
     text-decoration:underline;
 }
-
-/* ------Adaptation footer improvisée ------------------*/
-/* @media (max-width:900px)
-{
-    footer
-    {
-        position: absolute;
-        bottom:0;
-        width: 100%;
-        
-    }
-     main
-    {
-        padding-bottom: 150px;
-    } 
-}
-
-@media (max-width:230px)
-{
-    main
-    {
-        padding-bottom: 250px;
-    }
-} */
