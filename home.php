@@ -11,11 +11,7 @@ if (empty($_SESSION['username'])) {
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/getflix-style.css">
+    <?php include("head.php");?>
     <title>Home</title>
 </head>
 
@@ -23,6 +19,11 @@ if (empty($_SESSION['username'])) {
 
     
 <?php include('pc_navbar.php'); ?>
+    <?php 
+    
+     include("connexion_db.php"); 
+    ?>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-">
@@ -34,38 +35,7 @@ if (empty($_SESSION['username'])) {
                 <a href="logout.php">Logout </a>
             </div>
         </div>
-        <!--
-        <div class="row">
-            <div class="col-">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="https://placeimg.com/640/480/tech" alt="First slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="https://placeimg.com/640/480/tech" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="https://placeimg.com/640/480/tech" alt="Third slide">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        -->
+        <?php include('carousel.php');?>
         <div class="row my-3">
 
             <h3>Les nouveautés</h3>
@@ -79,7 +49,9 @@ if (empty($_SESSION['username'])) {
                                     <h5 class="card-title text-white">' . $data['title'] . '</h5>
                                     <p class="card-text text-white">' . $data['shortened_synopsis'] . '(...)</p>
                                     <p class="card-text text-white">' . $data['duration'] . ' min</p>
-                                </div></div>';
+                                </div>
+                            </div>
+                        </a>';
                 }
             ?>
 
@@ -97,7 +69,8 @@ if (empty($_SESSION['username'])) {
                                     <h5 class="card-title text-white">' . $data['title'] . '</h5>
                                     <p class="card-text text-white">' . $data['shortened_synopsis'] . '(...)</p>
                                     <p class="card-text text-white">' . $data['duration'] . ' min</p>
-                                </div></div>';
+                                </div>
+                            </div>';
                 }
             ?>
         </div>
@@ -114,7 +87,8 @@ if (empty($_SESSION['username'])) {
                                     <h5 class="card-title text-white">' . $data['title'] . '</h5>
                                     <p class="card-text text-white">' . $data['shortened_synopsis'] . '(...)</p>
                                     <p class="card-text text-white">' . $data['duration'] . ' min</p>
-                                </div></div>';
+                                </div>
+                            </div>';
                 }
             ?>
         </div>
@@ -203,8 +177,7 @@ if (empty($_SESSION['username'])) {
                                     <p class="card-text text-white">' . $data['shortened_synopsis'] . '(...)</p>
                                     <p class="card-text text-white">' . $data['duration'] . ' min</p>
                                 </div>
-                            </div>
-                        </a>';
+                            </div>';
                 }
             ?>
         </div>

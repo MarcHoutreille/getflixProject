@@ -2,8 +2,7 @@
 session_start();
 
 include("connexion_db.php");
-
-    
+   
 
     if (((isset($_POST['username'])) & (isset($_POST['password']))) & !empty($_POST['username']) & !empty($_POST['password']))
     {
@@ -18,6 +17,7 @@ include("connexion_db.php");
         if ($isPasswordCorrect) {
             
 
+            $_SESSION['id'] = $resultat['id'];
             $_SESSION["username"] = $resultat['username'];
             $_SESSION["email"] = $resultat['email'];
             $_SESSION["password_hash"] = $resultat['password'];
@@ -28,7 +28,7 @@ include("connexion_db.php");
             // echo $_SESSION["id_avatar"];
 
 
-            header("Location: home.php");
+            header("Location: user_account.php");
         } else 
         {
             header("Location: index.php");
