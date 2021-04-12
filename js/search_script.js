@@ -51,7 +51,7 @@ function replaceInputs(value)
 
             break;
 
-        case "year":
+        case "dates":
             //Supprimer les autres barres de recherches
             deleteSearchByName = document.getElementById("search_by_name");
             deleteSearchByName.style.display = "none";
@@ -107,7 +107,37 @@ function replaceInputs(value)
     
 }
 
+function ifNoResultByName()
+{
+    resultSeachByName = "";
+    resultSeachByName = document.getElementById("search-by-name-container");
 
+    if (resultSeachByName == null)
+    {
+        noResultByNameText = document.getElementById("search-by-name-title");
+        if(noResultByNameText != null)
+        {
+            noResultByNameText.insertAdjacentHTML("afterend","<p class='text-center fs-4 mt-3'>Sorry... Unfortunately we have no movie corresponding to your research. <i class='fas fa-sad-tear'></i></p>");
+        }
+        
+    }
+
+}
+
+function ifNoResultByDates()
+{
+    resultSeachByDates = "";
+    resultSeachByDates = document.getElementById("search-by-dates-container");
+    if(resultSeachByDates == null)
+    {
+        noResultByDatesText = document.getElementById("search-by-dates-title");
+        if(noResultByDatesText != null)
+        {
+            noResultByDatesText.insertAdjacentHTML("afterend","<p class='text-center fs-4 mt-3'>Sorry... Unfortunately we have no movie corresponding to your research. <i class='fas fa-sad-tear'></i></p>");
+        }
+        
+    }
+}
 
 // BACKUPS
  // {
