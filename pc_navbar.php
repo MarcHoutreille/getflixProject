@@ -33,7 +33,7 @@
                     <button class="btn btn-dark" type="button" id="search"><i class="fa fa-search"></i></button>
                 </div>
             </form>
-            <a href="user.php" class=""><i class="fa fa-user fs-3 border borde-3 rounded-circle p-3 bg-white"></i></a>
+            <a href="user_account.php" class=""><i class="fa fa-user fs-3 border borde-3 rounded-circle p-3 bg-white"></i></a>
         </div>
     </nav>
 <hr>

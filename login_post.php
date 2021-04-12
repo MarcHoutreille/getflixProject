@@ -1,4 +1,5 @@
 <?php 
+session_start();
 
 include("connexion_db.php");
 
@@ -8,23 +9,20 @@ include("connexion_db.php");
     {
         $username = strtolower($_POST['username']);
         $password = $_POST['password'];
-        $req = $db->prepare('SELECT id, password FROM users WHERE username = :username');
+        $req = $db->prepare('SELECT * FROM users WHERE username = :username');
         $req->execute(array('username' => $username));
         $resultat = $req->fetch();
         // Comparaison du pass envoyé via le formulaire avec la base
         $isPasswordCorrect = password_verify($_POST['password'], $resultat['password']);
 
         if ($isPasswordCorrect) {
-            echo "<div style='padding-top:17%' class='text-center'>";
-            echo "ok";
-            echo "</div>";
-            session_start();
+            
 
             $_SESSION["username"] = $resultat['username'];
             $_SESSION["email"] = $resultat['email'];
             $_SESSION["password_hash"] = $resultat['password'];
             $_SESSION["id_avatar"] = $resultat['id_avatar'];
-            
+            setcookie('username', $resultat['username'], time() + 365 * 24 * 3600, null, null, false, true);
             // echo $_SESSION["username"];
             // echo $_SESSION["email"];
             // echo $_SESSION["id_avatar"];
@@ -33,7 +31,7 @@ include("connexion_db.php");
             header("Location: home.php");
         } else 
         {
-            echo "not ok";
+            header("Location: index.php");
         }
 
         /*if ($check_connexion == 1) 
