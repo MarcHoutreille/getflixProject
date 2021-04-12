@@ -6,18 +6,13 @@ session_start();
 <html lang="en">
 <head>
     <?php include("head.php");?>
-    <title>Home</title>
+    <title>GetFlix * Home</title>
 </head>
 <body>
    <?php include("connexion_db.php"); ?>
     <?php include('pc_navbar.php'); ?>
 
     
-<?php include('pc_navbar.php'); ?>
-    <?php 
-    
-     include("connexion_db.php"); 
-    ?>
 
     <div class="container-fluid">
         <div class="row">
@@ -25,11 +20,7 @@ session_start();
                 <img src="img/getflix-logo.png" alt="getflix-logo" id="phoneLogo">
             </div>
         </div>
-        <div class="row">
-            <div class="col-">
-                <a href="logout.php">Logout </a>
-            </div>
-        </div>
+
         <?php include('carousel.php');?>
         <div class="row my-3">
 
