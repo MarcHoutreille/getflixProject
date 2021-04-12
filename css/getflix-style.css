@@ -215,14 +215,3 @@ footer a:link, footer a:visited, footer a:hover, footer a:active
 footer a:hover {
     text-decoration:underline;
 }
-
-/* ------Adaptation footer improvisée */
-
-/* @media (min-width: 768px) 
-{
-    footer
-    {
-        position: absolute;
-        width: 100vw;
-    }
-} */

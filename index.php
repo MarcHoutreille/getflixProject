@@ -1,6 +1,5 @@
-<?php 
+<?php
 session_start();
-include("connexion_db.php");
 ?>
 
 <!DOCTYPE html>
@@ -12,19 +11,64 @@ include("connexion_db.php");
 </head>
 
 <body>
-    <header class="row">
-        <div class="col-md-12 text-center my-5">
-            <h1>Discover the unlimited collection of movies with <strong>GETFLIX</strong>... <br>Watch it everywhere! <i class="fas fa-smile-wink"></i>
-            </h1>
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+                <a class="navbar-brand" href="#"><img src="images/GETFLIX-white-logo.png" alt="GETFLIX" class="logonav"></a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="navbar-nav ml-md-auto">
+                        <li class="nav-item dropdown mr-3">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">More Infos</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Who are we?</a> <a class="dropdown-item" href="#">Conditions of registration</a> <a class="dropdown-item" href="#">Contact Us</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-        <div class="col-md-12 text-center">
-            <img src="images/GETFLIX-white-logo.png" alt="GETFLIX" class="logo">
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>Discover an unlimited films with <strong>GETFLIX</strong>... Watch anywhere!</h2>
+                </div>
+                <div class="col-md-12 text-center">
+                    <img src="images/GETFLIX-white-logo.png" alt="GETFLIX" class="logo">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-3 text-center">
+                    <?php include("signup.php"); ?>
+                </div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-3 text-center">
+                    <?php include("login.php"); ?>
+                </div>
+                <div class="col-md-2">
+                </div>
+            </div>
         </div>
-    </header>
-    <main class="row">
-        <div class="col-lg-3 col-md-5 col-12 offset-lg-2 offset-md-1 offset-0 me-3-md text-center">
-            <?php include("signup.php"); ?>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <?php include("footer.php"); ?>
         </div>
+    </div>
 
         <div class="col-lg-3 col-md-5 col-12 offset-lg-2 offset-0 text-center">
             <?php include("login.php"); ?>

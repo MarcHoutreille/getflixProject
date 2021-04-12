@@ -1,4 +1,4 @@
-<footer class="mt-lg-5 mt-sm-0 mt-0">
+<footer class="col- mt-lg-5 mt-sm-0 mt-0">
     <section class="text-center">
         <a href="https://github.com/MarcHoutreille/getflixProject/" target="_blank">Take a look at our Github
             repository</a>
