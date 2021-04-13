@@ -52,7 +52,7 @@ Ce site de streaming a été réalisé grâce à HTML/CSS3/BOOSTRAP/JAVASCRIPT/P
     - Utilisation du Javascript en complément du PHP pour certaines fonctionnalités (recherche par critère)
 
 ## Jamboard
-![Briefing](images/readme/getflix-briefing.png)
+![Briefing](images/readme/getflix-briefing-jamboard.png)
 ![Schéma databases](images/readme/getflix-databases.png)
 ![Inspirations](images/readme/getflix-inspirations-1.png)
 ![Inspirations](images/readme/getflix-inspirations-2.png)
