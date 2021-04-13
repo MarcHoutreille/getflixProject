@@ -19,7 +19,7 @@ include("search_get.php");
 
 </head>
 
-<body onload="replaceNavBar(); displayOnlyNameSearch();">
+<body onload="replaceNavBar(); displayOnlyNameSearch(); ifNoResultByName(); ifNoResultByDates();">
     <?php include("pc_navbar.php"); ?>
     <main class="container">
         <?php if (isset($search)) {
@@ -93,25 +93,25 @@ include("search_get.php");
                         <select class="form-select" id="options" name="advanced_options" onchange="replaceInputs(this.value)">
                             <option selected disabled>Choose an option</option>
                             <option value="name" id="name">name</option>
-                            <option value="year" id="year">year</option>
+                            <option value="dates" id="dates">dates</option>
                             <option value="category" id="category">genre</option>
                             <option value="language" id="language">language</option>
                         </select>
                     </div>
 
-                    <button type="submit" class="btn btn-dark col-md-1 col-12"><i class="fa fa-search"></i></button>
+                    <button type="submit" class="btn btn-dark col-md-1 col-12" onclick=""><i class="fa fa-search"></i></button>
                 </div>
             </form>
 
             <!-- Affichage resultats recherche par nom -->
             <?php if (isset($search_by_name)) {
             ?>
-                <h2 class='text-center mt-5 mb-3'>Research by name results for "<?php echo $search_by_name; ?>"</h2>
+                <h2 id="search-by-name-title" class='text-center mt-5 mb-3'>Research by name results for "<?php echo $search_by_name; ?>"</h2>
                 <div class="row row-cols-1 row-cols-xl-3 row-cols-lg-2 g-4">
                     <?php
                     while ($one_movie = $list_of_movies_by_name->fetch()) {
                     ?>
-                        <div class="col">
+                        <div id="search-by-name-container" class="col">
                             <a href="movie.php?id=<?php echo $one_movie['id']; ?>" class="p-0 m-0 col-md-3 col-12">
                                 <div data-id="<?php echo $one_movie['id']; ?>" class="card text-black movie col- px-0">
                                     <img src="<?php echo $one_movie['thumbnail']; ?>" class="card-img" alt="<?php echo $one_movie['title']; ?>">
@@ -128,22 +128,19 @@ include("search_get.php");
                     ?>
                 </div>
                 <?php
-                if ($one_movie == false) 
-                {
-                    echo "<p class='text-center fs-4 mt-3'>Sorry... Unfortunately we have no movie corresponding to your research. <i class='fas fa-sad-tear'></i></p>";
-                }
+                
             }
             ?>
 
             <!-- Affichage resultats recherche par date -->
             <?php if (isset($search_by_dates_beginning) && isset($search_by_dates_ending)) {
             ?>
-                <h2 class='text-center mt-5 mb-3'>Research for movies between <?php echo $search_by_dates_beginning; ?> and <?php echo $search_by_dates_ending; ?></h2>
+                <h2 id="search-by-dates-title" class='text-center mt-5 mb-3'>Research for movies between <?php echo $search_by_dates_beginning; ?> and <?php echo $search_by_dates_ending; ?></h2>
                 <div class="row row-cols-1 row-cols-xl-3 row-cols-lg-2 g-4">
                     <?php
                     while ($one_movie = $list_of_movies_by_dates->fetch()) {
                     ?>
-                        <div class="col">
+                        <div id="search-by-dates-container" class="col">
                             <a href="movie.php?id=<?php echo $one_movie['id']; ?>" class="p-0 m-0 col-md-3 col-12">
                                 <div data-id="<?php echo $one_movie['id']; ?>" class="card text-black movie col- px-0">
                                     <img src="<?php echo $one_movie['thumbnail']; ?>" class="card-img" alt="<?php echo $one_movie['title']; ?>">
@@ -160,12 +157,7 @@ include("search_get.php");
                     ?>
                 </div>
             <?php
-                // if (!isset($one_movie) && $one_movie == false)
-                if ($one_movie == false)
-
-                {
-                    echo "<p class='text-center fs-4 mt-3'>Sorry... Unfortunately we have no movie corresponding to your research. <i class='fas fa-sad-tear'></i></p>";
-                }
+                                
             }
             ?>
 
