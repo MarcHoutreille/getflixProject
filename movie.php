@@ -28,18 +28,12 @@ include("connexion_db.php"); ?>
         </br>
         <div class="row">
             <div class="col-">
-                <form action="" method="post">
-                    <div class="form-group">
-                        <textarea class="form-control" id="Textarea1" rows="2"></textarea>
-                        <button type="submit" class="btn btn-dark">Submit</button>
-                    </div>
-                </form>
-                <!-- <section>
+                <section>
                     <form action="" method="post">
                         <input type="text" name="comment" class="rounded input-lg">
                         <input type="submit" value="Submit" name="submit">
                     </form>
-                </section> -->
+                </section>
                 <?php
 
                 $response = $db->query("SELECT * FROM comments WHERE id_movie= $film_id");
