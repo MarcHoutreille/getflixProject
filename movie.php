@@ -43,7 +43,7 @@ session_start();
             <div class="col-">
                 <section>
                     <form action="" method="post">
-                        <input type="text" name="comment">
+                        <input type="text" name="comment" class="rounded input-lg">
                         <input type="submit" value="Submit" name="submit">
                     </form>
                 </section>
@@ -54,8 +54,10 @@ session_start();
                 while ($data = $response->fetch()) {
 
                 ?>
-                    <section class="">
-                        <p class="comments"> <?php echo $data['username'] ?>: <?php echo $data['comment'] ?> </p>
+                    <section class="comments">
+                        <p class="name"><?php echo $data['username']; ?>: </p>
+                        <p class="comment"><?php echo $data['comment']; ?></p>
+                        <p class="day"><?php echo $data['date']; ?></p>
                     </section>
                 <?php
                 }
