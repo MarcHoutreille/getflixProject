@@ -24,6 +24,31 @@ body
     grid-template-rows: auto 1fr auto;
 }
 
+.comments{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    background-color: #343a40;
+    border-radius: 50px;
+    color: white;
+}
+
+.day{
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.name{
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.comment{
+    margin-top: 15px;
+}
+
 .row
 {
     margin-left: 0 !important;
