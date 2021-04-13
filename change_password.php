@@ -17,7 +17,7 @@ if (
 ) {
     $error_message = "";
 
-    // Vérif que le nouveau mot de passe et sa confirmation sont les mêmes
+    // Vérif que le nouveau mot de passe et sa confirmation sont les même
     if ($_POST['new-password'] != $_POST['confirm']) 
     {
         $error_message = "The two passwords don't match...";
