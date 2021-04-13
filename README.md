@@ -13,11 +13,11 @@ Ce site de streaming créé par...<br>
 "GETFLIX"
 
 ## Voici l'URL du site réalisé
-[Nous vous présentons "GetFlix"](https://MarcHoutreille.github.io/getflix/)
+[Nous vous présentons "GetFlix"](http://ed37803c20a8.ngrok.io/getflixproject/)
 
 ## Github
 L'ensemble des éléments "Pages / Dossiers / Images" ont été placés sur Github
-Voici le repo sur [Github](https://github.com/MarcHoutreille/getflix)
+Voici le repo sur [Github](https://github.com/MarcHoutreille/getflixProject)
 
 
 ## Code et langages utilisés
