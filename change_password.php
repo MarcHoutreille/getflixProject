@@ -17,38 +17,38 @@ if (
 ) {
     $error_message = "";
 
-    // Vérif que le nouveau mot de passe et sa confirmation sont les même
-    if ($_POST['new-password'] != $_POST['confirm']) {
+    // Vérif que le nouveau mot de passe et sa confirmation sont les mêmes
+    if ($_POST['new-password'] != $_POST['confirm']) 
+    {
         $error_message = "The two passwords don't match...";
     }
 
     //vérif que le nouveau mot de passe n'est pas le même que l'ancien
-    else if ($_POST['old-password'] == $_POST['new-password'] || $_POST['old-password'] == $_POST['confirm']) {
+    else if ($_POST['old-password'] == $_POST['new-password'] || $_POST['old-password'] == $_POST['confirm']) 
+    {
         $error_message = "You can't make a change to use the same password !";
     }
 
-    // vérifier que l'ancien mot de passe est bien le bon WIP ! 
+    // vérifier que l'ancien mot de passe est bien le bon 
     else if (password_verify($_POST['old-password'], $_SESSION["password_hash"]) == false) {
         $error_message = "Your current password is incorrect";
-        // A voir avec Marc pour la question de la sécurité";
 
-    } else {
+    } 
+    else 
+    // c'est que les conditions sont bonnes, on procède au changement de mot de passe
+    {
         $new_password = $_POST['new-password'];
         $new_password_hash = password_hash($new_password, PASSWORD_DEFAULT);
 
         $req = $db->prepare('UPDATE users SET password = ? WHERE username = ?');
 
         $req->execute(array($new_password_hash, $_SESSION["username"]));
-        //faire une condition pour verifer que ca a bien été fait et afficher quelque part que ca a été fait.
 
-        // $req_check = $db->prepare('SELECT username, password FROM users WHERE username = ?');
-        // $req_check -> execute (array($_SESSION['username']);
-
-        // $check_modification = $req_check->fetch();
-        // $check_new_password = password_verify();
 
         $success_message = "Congratulation, your password has been changed !";
         $error_message = "";
+        //remplacement du mdp dans la $session pour que le mot de passe puisse etre rechangé : 
+        $_SESSION["password_hash"] = $new_password_hash;
     }
 }
 ?>
@@ -56,17 +56,17 @@ if (
 <h2 class="text-center mb-3">Change your password</h2>
 <form action="" method="post">
     <div class="input-group mb-3 col-12 col-md-4">
-        <span class="input-group-text" id="basic-addon3">Your old password</span>
-        <input type="password" class="form-control" aria-describedby="old-password" name="old-password" placeholder="old password">
+        <span class="input-group-text" id="basic-addon3"><i class="fas fa-unlock"></i></span>
+        <input type="password" class="form-control" aria-describedby="old-password" name="old-password" placeholder="Your old password">
     </div>
     <div class="input-group mb-3">
-        <span class="input-group-text">Choose your new password</span>
-        <input type="password" class="form-control" placeholder="new password" aria-label="new password" name="new-password">
+        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+        <input type="password" class="form-control" placeholder="Choose your new password" aria-label="new password" name="new-password">
 
     </div>
     <div class="input-group mb-3">
-        <span class="input-group-text">Repeat this new password</span>
-        <input type="password" class="form-control" placeholder="new password" aria-label="Server" name="confirm">
+        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+        <input type="password" class="form-control" placeholder="Repeat this new password" aria-label="Server" name="confirm">
     </div>
     <?php
     if (isset($error_message)) {

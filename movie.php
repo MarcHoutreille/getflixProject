@@ -1,11 +1,11 @@
-<?php 
+<?php
 session_start();
 include("connexion_db.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <?php include("head.php");?>
+    <?php include("head.php"); ?>
     <title>GetFlix * Movie</title>
 </head>
 
@@ -24,14 +24,22 @@ include("connexion_db.php"); ?>
                 ?>
             </div>
         </div>
+        <h2 class="text-center"> Comments </h2>
+        </br>
         <div class="row">
             <div class="col-">
-                <section>
+                <form action="" method="post">
+                    <div class="form-group">
+                        <textarea class="form-control" id="Textarea1" rows="2"></textarea>
+                        <button type="submit" class="btn btn-dark">Submit</button>
+                    </div>
+                </form>
+                <!-- <section>
                     <form action="" method="post">
                         <input type="text" name="comment" class="rounded input-lg">
                         <input type="submit" value="Submit" name="submit">
                     </form>
-                </section>
+                </section> -->
                 <?php
 
                 $response = $db->query("SELECT * FROM comments WHERE id_movie= $film_id");
@@ -64,7 +72,7 @@ include("connexion_db.php"); ?>
             </div>
         </div>
     </main>
-    <?php include("phone_navbar.php");?>                
+    <?php include("phone_navbar.php"); ?>
     <?php include("footer.php"); ?>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

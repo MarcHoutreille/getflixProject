@@ -15,8 +15,7 @@ include("connexion_db.php");
     <?php include('pc_navbar.php'); ?>
     <main>
         <div class="container-fluid">
-
-            <?php include('carousel.php'); ?>
+            <h2 class="text-center mt-5">Hello, <?php echo $_SESSION["username"]; ?>! What do you want to watch today ?</h2>
             <div class="row my-3">
 
                 <h3>What's new?</h3>
