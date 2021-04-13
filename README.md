@@ -35,9 +35,9 @@ Ce site de streaming a été réalisé grâce à HTML/CSS3/BOOSTRAP/JAVASCRIPT/P
 
 ## Organisation du travail
 - Répartition des tâches :
-  - Main FrontEnd: Nathalie Anneessens & Christian Jadot
-  - Main BackEnd: Marc Houtreille & Thomas Quertinmont
-  - Project Manager: Marc Houtreille
+  - **Main FrontEnd :** Nathalie Anneessens & Christian Jadot
+  - **Main BackEnd :** Marc Houtreille & Thomas Quertinmont
+  - **Project Manager :** Marc Houtreille
 
 - Détails des réalisations
   - FrontEnd :
@@ -49,16 +49,14 @@ Ce site de streaming a été réalisé grâce à HTML/CSS3/BOOSTRAP/JAVASCRIPT/P
   - BackEnd :
     - Démarrage du codage en Javascript et PHP
     - Structurer le Javascript en correspondance des balises HTML.
-    - Utilisation du Javascript en complément du PHP pour certaines fonctionnalités
+    - Utilisation du Javascript en complément du PHP pour certaines fonctionnalités (recherche par critère)
 
-## Jomboard
+## Jamboard
 ![Briefing](images/readme/getflix-briefing.png)
 ![Schéma databases](images/readme/getflix-databases.png)
 ![Inspirations](images/readme/getflix-inspirations-1.png)
 ![Inspirations](images/readme/getflix-inspirations-2.png)
 ![Inspirations](images/readme/getflix-inspirations-3.png)
-
-
 
 
 ## Licences

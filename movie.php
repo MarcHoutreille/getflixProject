@@ -59,7 +59,7 @@ include("connexion_db.php"); ?>
 
                     $sql->execute(array($userid, $username, $film_id, $date, $comment));
 
-                    header('refresh: 1');
+                    header('refresh: 0');
                 }
 
                 ?>
