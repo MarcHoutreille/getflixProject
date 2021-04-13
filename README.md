@@ -17,7 +17,7 @@ Ce site de streaming créé par...<br>
 
 ## Github
 L'ensemble des éléments "Pages / Dossiers / Images" ont été placés sur Github
-Voici le repo sur [Github](https://github.com/MarcHoutreille/getflix)
+Voici le repo sur [Github](https://github.com/MarcHoutreille/getflixProject)
 
 
 ## Code et langages utilisés
@@ -35,26 +35,29 @@ Ce site de streaming a été réalisé grâce à HTML/CSS3/BOOSTRAP/JAVASCRIPT/P
 
 ## Organisation du travail
 - Répartition des tâches :
-  - FrontEnd: Nathalie Anneessens () & Christian Jadot ()
-  - BackEnd: Marc Houtreille () & Thomas Quertinmont ()
-  - Project Manager: Marc Houtreille
+  - **Main FrontEnd :** Nathalie Anneessens & Christian Jadot
+  - **Main BackEnd :** Marc Houtreille & Thomas Quertinmont
+  - **Project Manager :** Marc Houtreille
 
 - Détails des réalisations
   - FrontEnd :
-    - Création du layout, validation et démarrage de la mise en HTML5/CSS3.<br>
-    - Récupération de tous les éléments visuels.<br>
-    - Création des différentes zones du site.<br>
-    - Structurer l'HTML en correspondance des actions Javascript, implémentation de tous les éléments utiles.<br>
-    - Fixer au mieux les éléments pour @media.<br><br>
+    - Création du layout, validation et démarrage de la mise en HTML5/CSS3.
+    - Récupération de tous les éléments visuels.
+    - Création des différentes zones du site.
+    - Structurer l'HTML en correspondance des actions Javascript, implémentation de tous les éléments utiles.
+    - Fixer au mieux les éléments pour @media.
   - BackEnd :
-    - Démarrage du codage en Javascript et PHP<br>
-    - Structurer le Javascript en correspondance des balises HTML.<br>
+    - Démarrage du codage en Javascript et PHP
+    - Structurer le Javascript en correspondance des balises HTML.
+    - Utilisation du Javascript en complément du PHP pour certaines fonctionnalités (recherche par critère)
 
-## Layout / Jamboard
-![Wireframe 1](images/xxx.jpg)
-![Wireframe 2](images/xxx.jpg)
-![Wireframe 3](images/xxx.jpg)
-![Wireframe 4](images/xxx.jpg)
+## Jamboard
+![Briefing](images/readme/getflix-briefing.png)
+![Schéma databases](images/readme/getflix-databases.png)
+![Inspirations](images/readme/getflix-inspirations-1.png)
+![Inspirations](images/readme/getflix-inspirations-2.png)
+![Inspirations](images/readme/getflix-inspirations-3.png)
+
 
 ## Color Palette
 
@@ -70,7 +73,8 @@ Ce site de streaming a été réalisé grâce à HTML/CSS3/BOOSTRAP/JAVASCRIPT/P
 
 ## Licences
 ### Images
-Toutes les images utilisées proviennent du site [xxx](https://www.)
+Toutes les images utilisées proviennent de [Google Image](https://www.google.com/imghp?hl=fr)
 
 ### Videos
 Toutes les vidéos utilisées proviennent du site [Youtube](https://www.youtube.com) 
+
