@@ -11,14 +11,11 @@ include("connexion_db.php");
 </head>
 
 <body>
-<div class="row">
-            <div class="col-">
-                <img src="img/getflix-logo.png" alt="getflix-logo" id="phoneLogo">
-            </div>
-        </div>
+
     <?php include('pc_navbar.php'); ?>
-    <h1 class="text-center my-5">Hello, <?php echo $_SESSION["username"]; ?> ! Do you want to edit profile ?</h1>
+    
     <main class="container mb-5">
+    <h1 class="text-center my-5">Hello, <?php echo $_SESSION["username"]; ?> ! Do you want to edit profile ?</h1>
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
@@ -63,10 +60,10 @@ include("connexion_db.php");
                 </div>
             </div>
         </div>
-</main>
+    </main>
 
     <?php include('phone_navbar.php'); ?>
-    <?php include('footer.php') ?>
+    <?php include('footer.php'); ?>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
