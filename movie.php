@@ -41,11 +41,24 @@ session_start();
         </div>
         <div class="row">
             <div class="col-">
+                <section>
+                    <form action="" method="post">
+                        <input type="text" name="comment">
+                        <input type="submit" value="Submit" name="submit">
+                    </form>
+                </section>
                 <?php
 
-                include('comments.php');
+                $response = $db->query("SELECT * FROM comments WHERE id_movie= $film_id");
+
+                while ($data = $response->fetch()) {
+
                 ?>
+                    <section class="">
+                        <p class="comments"> <?php echo $data['username'] ?>: <?php echo $data['comment'] ?> </p>
+                    </section>
                 <?php
+                }
                 if (isset($_POST['submit'])) {
 
                     $userid = $_SESSION['userid'];
@@ -53,11 +66,11 @@ session_start();
                     $date = date('Y-m-d');
                     $comment = htmlspecialchars($_POST['comment']);
 
-                    $sql = $db->prepare('INSERT INTO comments (id_user, username, date, comment, id_film) VALUES (?, ?, ?, ?, ?)');
+                    $sql = $db->prepare('INSERT INTO comments (id_user, username, id_movie, date, comment) VALUES (?, ?, ?, ?, ?)');
 
-                    $sql->execute(array($userid, $username, $date, $comment, $film_id));
-                    
-                    header('Location: movie.php?id='.$film_id.'');
+                    $sql->execute(array($userid, $username, $film_id, $date, $comment));
+
+                    header('refresh: 1');
                 }
 
                 ?>
